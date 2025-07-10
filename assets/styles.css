@@ -1,0 +1,24 @@
+
+.img-homescreen img {
+ height: 280px;
+ object-fit: cover;
+}
+
+
+.flash-image {
+    width: 350px;
+}
+
+.flash-box {
+    gap: 1rem;
+    scroll-behavior: smooth;
+}
+
+.second-img-div {
+    height: 500px;
+}
+
+.second-img {
+    object-fit: cover;
+}
+
