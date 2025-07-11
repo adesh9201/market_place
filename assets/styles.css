@@ -1,7 +1,6 @@
-
 .img-homescreen img {
- height: 280px;
- object-fit: cover;
+    height: 280px;
+    object-fit: cover;
 }
 
 
@@ -18,7 +17,20 @@
     height: 500px;
 }
 
+
 .second-img {
     object-fit: cover;
 }
 
+/* all new featured images style */
+.new-feature {
+    object-fit: cover;
+}
+
+.new-product-div {
+    height: 600px;
+}
+
+.new-feature-div {
+    height: 50%;
+}
