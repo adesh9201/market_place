@@ -2,675 +2,934 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketplace Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabric Marketplace Home</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS (optional) -->
-    <link rel="stylesheet" href="assets/styles.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Custom CSS (optional) -->
+  <link rel="stylesheet" href="assets/styles.css">
 
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-
-
-
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body class="pt-5">
 
-    <!-- Header -->
-    <header class="bg-dark text-white fixed-top py-2">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="text-center flex-grow-1">
-                <span>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! </span>
-                <a href="#" class="text-warning text-decoration-underline fw-bold">Shop Now</a>
-            </div>
-            <div class="d-flex align-items-center">
-                <label for="languageSelect" class="visually-hidden">Select Language</label>
-                <select id="languageSelect" name="language" class="bg-dark border-0 text-white p-0">
-                    <option value="en" selected>EN</option>
-                    <option value="es">ES</option>
-                    <option value="fr">FR</option>
-                    <option value="de">DE</option>
-                    <option value="hi">HI</option>
-                    <option value="zh">ZH</option>
-                    <option value="ja">JA</option>
-                    <option value="ar">AR</option>
-                </select>
-            </div>
+  <!-- Header -->
+  <header class="bg-dark text-white fixed-top py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="text-center flex-grow-1">
+        <span>Summer Sale For All Fabrics And Free Express Delivery - OFF 50%! </span>
+        <a href="#" class="text-warning text-decoration-underline fw-bold">Shop Now</a>
+      </div>
+      <div class="d-flex align-items-center">
+        <label for="languageSelect" class="visually-hidden">Select Language</label>
+        <select id="languageSelect" name="language" class="bg-dark border-0 text-white p-0">
+          <option value="en" selected>EN</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+          <option value="hi">HI</option>
+          <option value="zh">ZH</option>
+          <option value="ja">JA</option>
+          <option value="ar">AR</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg text-dark mt-3 ">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">FabricExclusive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Center nav links -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup.html">Sign Up</a>
+          </li>
+        </ul>
+
+        <!-- Search bar -->
+        <form class="d-flex me-3">
+          <input class="form-control" type="search" placeholder="Search fabrics..." aria-label="Search">
+          <button class="btn btn-outline-secondary ms-2" type="submit" title="Search">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+
+        <!-- Icons -->
+        <div class="d-flex">
+          <a href="#" class="me-3 text-dark fs-5" title="Wishlist"><i class="bi bi-heart"></i></a>
+          <a href="#" class="text-dark fs-5" title="Cart"><i class="bi bi-cart"></i></a>
         </div>
-    </header>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg text-dark mt-3 ">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Exclusive</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+  <!-- Main Content -->
+  <main class="py-3">
+    <div class="container my-5">
+      <div class="row">
 
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <!-- Center nav links -->
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up</a>
-                    </li>
-                </ul>
-
-                <!-- Search bar -->
-                <form class="d-flex me-3">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-secondary ms-2" type="submit" title="Search">
-                        <i class="bi bi-search"></i>
-                    </button>
-                </form>
-
-                <!-- Icons -->
-                <div class="d-flex">
-                    <a href="#" class="me-3 text-dark fs-5" title="Wishlist"><i class="bi bi-heart"></i></a>
-                    <a href="#" class="text-dark fs-5" title="Cart"><i class="bi bi-cart"></i></a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="py-3">
-
-
-
-        <div class="container my-5">
-            <!-- Header row -->
-            <div class="row align-items-center bg-light p-3 rounded mb-4">
-                <!-- Left: Heading text -->
-                <div class="col">
-                    <h5 class="text-danger fw-bold mb-1 text-center">Women's Fashion</h5>
-                    <h2 class="fw-bold m-0 text-center">Best Selling Products</h2>
-                </div>
-
-            </div>
-
-            <!-- Products grid: First row -->
-            <div class="row g-3 mb-3">
-                <!-- Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">HAVIT HV-G92 Gamepad</h6>
-                            <p class="text-danger fw-bold mb-1">$120</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(88)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">AK-900 Wired Keyboard</h6>
-                            <p class="text-danger fw-bold mb-1">$160</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(75)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">IPS LCD Gaming Monitor</h6>
-                            <p class="text-danger fw-bold mb-1">$960</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$1160</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Second row -->
-            <div class="row g-3">
-                <!-- Duplicate above 4 cards as examples -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$370</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- You can duplicate or modify next 3 cards similarly -->
-                <!-- Card 6 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$375</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Third row -->
-            <div class="row g-3">
-                <!-- Duplicate above 4 cards as examples -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$370</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- You can duplicate or modify next 3 cards similarly -->
-                <!-- Card 6 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$375</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Fourth row -->
-            <div class="row g-3">
-                <!-- Duplicate above 4 cards as examples -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$370</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- You can duplicate or modify next 3 cards similarly -->
-                <!-- Card 6 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$375</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Fifth row -->
-            <div class="row g-3">
-                <!-- Duplicate above 4 cards as examples -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$370</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- You can duplicate or modify next 3 cards similarly -->
-                <!-- Card 6 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 7 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$375</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 8 -->
-                <div class="col-12 col-sm-6 col-md-3">
-                    <div class="card position-relative">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-                            class="card-img-top" alt="Product">
-                        <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                            <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
-                                    class="bi bi-heart"></i></a>
-                            <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
-                                    class="bi bi-eye"></i></a>
-                        </div>
-                        <div class="card-body">
-                            <h6 class="fw-bold mb-1">S-Series Comfort Chair</h6>
-                            <p class="text-danger fw-bold mb-1">$400</p>
-                            <div class="text-warning mb-1">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-                            </div>
-                            <p class="text-muted small mb-0">(99)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+        <!-- Left side: Categories -->
+        <div class="col-lg-2 mb-4 mb-lg-0">
+          <ul class="list-unstyled">
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/cotton-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Cotton Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/silk-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Silk Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/wool-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Wool Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/linen-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Linen Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/synthetic-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Synthetic Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/denim-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Denim Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/knit-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Knit Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/embroidered-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Embroidered Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <a href="/exclusive/printed-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Printed Fabrics</a>
+              <i class="bi bi-chevron-right"></i>
+            </li>
+          </ul>
         </div>
 
+        <!-- Right side: Image -->
+<div class="first-img-div col-lg-10">
+  <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=1200&q=80"
+    alt="Fabric Collection" class="first-img img-fluid rounded w-100">
+</div>
 
+      </div>
+    </div>
 
-
-
-
-    </main>
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5 mt-5">
-        <div class="container">
-            <div class="row">
-                <!-- Company -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Company</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#aboutus" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="#careers" class="text-white text-decoration-none">Careers</a></li>
-                        <li><a href="#press" class="text-white text-decoration-none">Press</a></li>
-                    </ul>
-                </div>
-                <!-- Products -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Products</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#marketplace" class="text-white text-decoration-none">Marketplace</a></li>
-                        <li><a href="#pricing" class="text-white text-decoration-none">Pricing</a></li>
-                        <li><a href="#features" class="text-white text-decoration-none">Features</a></li>
-                    </ul>
-                </div>
-                <!-- Support -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Support</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#contactUs" class="text-white text-decoration-none">Contact Us</a></li>
-                        <li><a href="#FAQs" class="text-white text-decoration-none">FAQs</a></li>
-                        <li><a href="#terms" class="text-white text-decoration-none">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <!-- Social -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Follow us</h6>
-                    <div class="d-flex gap-3">
-                        <a href="https://facebook.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
+    <div class="container my-5">
+      <!-- Header row -->
+      <div class="row align-items-center bg-light p-3 rounded mb-4">
+        <!-- Left: Flash sales text -->
+        <div class="col-auto">
+          <h5 class="text-danger fw-bold mb-1">Today's</h5>
+          <h2 class="fw-bold m-0">Fabric Flash Sales</h2>
         </div>
-    </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Center: Countdown -->
+        <div class="col text-center">
+          <div class="d-flex justify-content-center gap-3 mb-1">
+            <span class="fw-semibold">Days</span>
+            <span class="fw-semibold">Hours</span>
+            <span class="fw-semibold">Minutes</span>
+            <span class="fw-semibold">Seconds</span>
+          </div>
+          <div class="d-flex justify-content-center gap-3">
+            <div class="bg-dark text-white rounded px-2 py-1 fw-bold">03</div>
+            <div class="bg-dark text-white rounded px-2 py-1 fw-bold">23</div>
+            <div class="bg-dark text-white rounded px-2 py-1 fw-bold">19</div>
+            <div class="bg-dark text-white rounded px-2 py-1 fw-bold">56</div>
+          </div>
+        </div>
 
+        <!-- Right: Arrows with circular bg -->
+        <div class="col-auto d-flex gap-2">
+          <a href="#" class="text-dark bg-light rounded-circle p-2" title="Previous"><i
+              class="bi bi-arrow-left"></i></a>
+          <a href="#" class="text-dark bg-light rounded-circle p-2" title="Next"><i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
 
+      <!-- Products grid -->
+      <div class="row g-3">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-40%</div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Cotton Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Premium Fabric</h6>
+              <p class="text-danger fw-bold mb-1">$12/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(88)</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-35%</div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Silk Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Pure Silk Fabric</h6>
+              <p class="text-danger fw-bold mb-1">$25/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(75)</p>
+            </div>
+          </div>
+        </div>
 
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-30%</div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Wool Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Wool Blend Fabric</h6>
+              <p class="text-danger fw-bold mb-1">$18/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-25%</div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Linen Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Pure Linen Fabric</h6>
+              <p class="text-danger fw-bold mb-1">$15/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-25%</div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Denim Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Premium Denim</h6>
+              <p class="text-danger fw-bold mb-1">$20/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-25%</div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Embroidered Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Embroidered Silk</h6>
+              <p class="text-danger fw-bold mb-1">$35/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button row -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <a href="#" class="btn btn-danger px-4 py-2">View All Fabrics</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <hr>
+    </div>
+
+    <div class="container my-5">
+      <!-- Title Row -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h5 class="text-danger fw-bold mb-1">Categories</h5>
+          <h2 class="fw-bold mb-0">Browse Fabric Categories</h2>
+        </div>
+        <!-- Arrows -->
+        <div class="d-flex gap-2">
+          <a href="#" class="text-dark bg-light rounded-circle p-2" title="Previous"><i
+              class="bi bi-arrow-left"></i></a>
+          <a href="#" class="text-dark bg-light rounded-circle p-2" title="Next"><i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Categories grid -->
+      <div class="row g-3 justify-content-center">
+
+        <!-- Cotton -->
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <div class="border rounded py-4">
+            <i class="fas fa-tshirt fs-1 text-danger"></i>
+            <p class="mt-2 fw-semibold mb-0">Cotton</p>
+          </div>
+        </div>
+
+        <!-- Silk -->
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <div class="border rounded py-4">
+            <i class="fas fa-vest fs-1 text-danger"></i>
+            <p class="mt-2 fw-semibold mb-0">Silk</p>
+          </div>
+        </div>
+
+        <!-- Wool -->
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <div class="border rounded py-4">
+            <i class="fas fa-vest fs-1 text-danger"></i>
+            <p class="mt-2 fw-semibold mb-0">Wool</p>
+          </div>
+        </div>
+
+        <!-- Linen -->
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <div class="border rounded py-4">
+            <i class="fas fa-rug fs-1 text-danger"></i>
+            <p class="mt-2 fw-semibold mb-0">Linen</p>
+          </div>
+        </div>
+
+        <!-- Synthetic -->
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <div class="border rounded py-4">
+            <i class="fas fa-socks fs-1 text-danger"></i>
+            <p class="mt-2 fw-semibold mb-0">Synthetic</p>
+          </div>
+        </div>
+
+        <!-- Denim -->
+        <div class="col-6 col-sm-4 col-md-2 text-center">
+          <div class="border rounded py-4">
+            <i class="fas fa-vest fs-1 text-danger"></i>
+            <p class="mt-2 fw-semibold mb-0">Denim</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <hr>
+    </div>
+
+    <div class="container my-5">
+      <!-- Header row -->
+      <div class="row align-items-center bg-light p-3 rounded mb-4">
+        <!-- Left: Heading text -->
+        <div class="col">
+          <h5 class="text-danger fw-bold mb-1">This Month</h5>
+          <h2 class="fw-bold m-0">Best Selling Fabrics</h2>
+        </div>
+
+        <!-- Right: Button -->
+        <div class="col-auto text-end">
+          <a href="#" class="btn btn-danger px-4 py-2">View All Fabrics</a>
+        </div>
+      </div>
+
+      <!-- Products grid -->
+      <div class="row g-3">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Cotton Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Organic Cotton</h6>
+              <p class="text-danger fw-bold mb-1">$14/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(88)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Silk Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Mulberry Silk</h6>
+              <p class="text-danger fw-bold mb-1">$28/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(75)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Wool Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Merino Wool</h6>
+              <p class="text-danger fw-bold mb-1">$22/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Linen Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Flax Linen</h6>
+              <p class="text-danger fw-bold mb-1">$18/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Denim Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Stretch Denim</h6>
+              <p class="text-danger fw-bold mb-1">$24/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Embroidered Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="View product"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Embroidered Silk</h6>
+              <p class="text-danger fw-bold mb-1">$38/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <hr>
+    </div>
+
+    <div class="container my-5">
+      <div class="second-img-div rounded overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=1200&q=80"
+          alt="Fabric Collection" class="second-img img-fluid w-100 h-100">
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <hr>
+    </div>
+
+    <div class="container my-5">
+      <!-- Header row -->
+      <div class="row align-items-center bg-light p-3 rounded mb-4">
+        <!-- Left: Heading text -->
+        <div class="col">
+          <h5 class="text-danger fw-bold mb-1">Featured</h5>
+          <h2 class="fw-bold m-0">Our Premium Fabric Collections</h2>
+        </div>
+
+        <!-- Right: Arrows with circular bg -->
+        <div class="col-auto d-flex gap-2">
+          <a href="#" class="text-dark bg-light rounded-circle p-2" title="Previous"><i
+              class="bi bi-arrow-left"></i></a>
+          <a href="#" class="text-dark bg-light rounded-circle p-2" title="Next"><i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Products grid: First row -->
+      <div class="row g-3 mb-3">
+        <!-- Card 1 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Cotton Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Organic Cotton</h6>
+              <p class="text-danger fw-bold mb-1">$14/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(88)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Silk Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Mulberry Silk</h6>
+              <p class="text-danger fw-bold mb-1">$28/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(75)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Wool Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Merino Wool</h6>
+              <p class="text-danger fw-bold mb-1">$22/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Linen Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Flax Linen</h6>
+              <p class="text-danger fw-bold mb-1">$18/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second row -->
+      <div class="row g-3">
+        <!-- Card 5 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Denim Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Stretch Denim</h6>
+              <p class="text-danger fw-bold mb-1">$24/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Embroidered Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Embroidered Silk</h6>
+              <p class="text-danger fw-bold mb-1">$38/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Printed Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Printed Cotton</h6>
+              <p class="text-danger fw-bold mb-1">$16/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card position-relative">
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Knit Fabric">
+            <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
+              <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1" title="Add to wishlist"><i
+                  class="bi bi-heart"></i></a>
+              <a href="#" class="text-dark bg-white rounded-circle p-1" title="View product"><i
+                  class="bi bi-eye"></i></a>
+            </div>
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Premium Knit</h6>
+              <p class="text-danger fw-bold mb-1">$20/meter</p>
+              <div class="text-warning mb-1">
+                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                  class="bi bi-star"></i><i class="bi bi-star"></i>
+              </div>
+              <p class="text-muted small mb-0">(99)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center">
+          <a href="#" class="btn btn-danger px-4 py-2">View All Collections</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <hr>
+    </div>
+
+    <!-- New Arrivals Section -->
+    <div class="new-product-div new-product-section py-3 pb-5">
+      <div class="container h-100">
+        <div class="row align-items-center bg-light p-3 rounded mb-4">
+          <!-- Left: Heading text -->
+          <div class="col">
+            <h5 class="text-danger fw-bold mb-1">Featured</h5>
+            <h2 class="fw-bold m-0">New Fabric Arrivals</h2>
+          </div>
+        </div>
+
+        <!-- Images row -->
+        <div class="row h-100">
+          <!-- Left big image -->
+          <div class="col-md-6 h-100">
+            <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=600&q=80"
+              class="new-feature img-fluid h-100 w-100" alt="New Cotton Collection">
+          </div>
+
+          <!-- Right stacked images -->
+          <div class="col-md-6 h-100 d-flex flex-column">
+            <!-- Top row -->
+            <div class="new-feature-div mb-2">
+              <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
+                class="new-feature img-fluid w-100 h-100" alt="Silk Collection">
+            </div>
+
+            <!-- Bottom row: two columns -->
+            <div class="new-feature-div new-feature-div d-flex">
+              <div class="me-2 w-50">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                  class="new-feature img-fluid w-100 h-100" alt="Wool Collection">
+              </div>
+              <div class="w-50">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                  class="new-feature img-fluid w-100 h-100" alt="Linen Collection">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider line -->
+    <div class="container my-5 pt-5">
+      <hr>
+    </div>
+
+    <div class="container my-5 pt-5">
+      <div class="row g-4 justify-content-center">
+        <!-- Free Delivery -->
+        <div class="col-12 col-md-4 text-center">
+          <div class="border rounded p-4 h-100">
+            <i class="bi bi-truck fs-1 text-danger"></i>
+            <h5 class="fw-bold mt-3">FREE FABRIC SAMPLES</h5>
+            <p class="text-muted mb-0">Free fabric samples for all orders over $100</p>
+          </div>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-12 col-md-4 text-center">
+          <div class="border rounded p-4 h-100">
+            <i class="bi bi-headset fs-1 text-danger"></i>
+            <h5 class="fw-bold mt-3">FABRIC EXPERTS</h5>
+            <p class="text-muted mb-0">Our fabric specialists are here to help</p>
+          </div>
+        </div>
+
+        <!-- Money Back -->
+        <div class="col-12 col-md-4 text-center">
+          <div class="border rounded p-4 h-100">
+            <i class="bi bi-arrow-repeat fs-1 text-danger"></i>
+            <h5 class="fw-bold mt-3">QUALITY GUARANTEE</h5>
+            <p class="text-muted mb-0">We stand behind our fabric quality</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- Company -->
+        <div class="col-6 col-md-3 mb-3">
+          <h6 class="text-uppercase">Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="#aboutus" class="text-white text-decoration-none">About Us</a></li>
+            <li><a href="#careers" class="text-white text-decoration-none">Careers</a></li>
+            <li><a href="#press" class="text-white text-decoration-none">Press</a></li>
+          </ul>
+        </div>
+        <!-- Products -->
+        <div class="col-6 col-md-3 mb-3">
+          <h6 class="text-uppercase">Fabrics</h6>
+          <ul class="list-unstyled">
+            <li><a href="#cotton" class="text-white text-decoration-none">Cotton</a></li>
+            <li><a href="#silk" class="text-white text-decoration-none">Silk</a></li>
+            <li><a href="#wool" class="text-white text-decoration-none">Wool</a></li>
+          </ul>
+        </div>
+        <!-- Support -->
+        <div class="col-6 col-md-3 mb-3">
+          <h6 class="text-uppercase">Support</h6>
+          <ul class="list-unstyled">
+            <li><a href="#contactUs" class="text-white text-decoration-none">Contact Us</a></li>
+            <li><a href="#FAQs" class="text-white text-decoration-none">FAQs</a></li>
+            <li><a href="#terms" class="text-white text-decoration-none">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <!-- Social -->
+        <div class="col-6 col-md-3 mb-3">
+          <h6 class="text-uppercase">Follow us</h6>
+          <div class="d-flex gap-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="text-white fs-5" title="Facebook"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="text-white fs-5" title="Twitter"><i
+                class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="text-white fs-5" title="Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-white fs-5" title="LinkedIn"><i
+                class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

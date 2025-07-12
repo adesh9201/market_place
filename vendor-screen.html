@@ -1,347 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marketplace Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" />
+<meta name="theme-color" content="#ff5c8d" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS (optional) -->
-    <link rel="stylesheet" href="assets/styles.css">
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-
-
-
-
-
+    <title>Marketplace Vendor Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
 </head>
-
-<body class="pt-5">
-
-
-    <!-- Header -->
-    <header class="fixed-top bg-white shadow-sm">
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-
-                <!-- Left: Logo -->
-                <a class="navbar-brand fw-bold" href="#">Logo</a>
-
-                <!-- Toggle button for mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Center: Search bar -->
-                <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
-                    <form class="d-flex w-50">
-                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-secondary ms-2" type="submit" title="Search">
-                            <i class="bi bi-search"></i>
+<body class="bg-light">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Enhanced Sidebar -->
+            <nav class="col-md-2 d-md-block bg-dark sidebar p-0 shadow-lg" style="min-height: 100vh;">
+                <div class="position-sticky">
+                    <!-- Enhanced User Profile -->
+                    <div class="bg-primary p-4 text-white">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
+                                <i class="fas fa-user-tie fa-lg"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 text-white">--Beebay--</h6>
+                                <small class="text-white-50">Premium Seller</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Enhanced Notifications -->
+                    <div class="bg-danger p-3 text-white d-flex justify-content-between align-items-center">
+                        <span class="d-flex align-items-center">
+                            <i class="fas fa-bell me-2"></i>
+                            <span class="badge bg-warning text-dark rounded-pill me-2">2</span>
+                            Notices
+                        </span>
+                        <button class="btn btn-outline-light btn-sm">
+                            <i class="fas fa-headset me-1"></i>Support
                         </button>
-                    </form>
-                </div>
-
-                <!-- Right: Icons -->
-                <div class="d-flex align-items-center">
-                    <!-- Notification -->
-                    <a href="#" class="me-3 text-dark fs-5" title="Notifications"><i class="bi bi-bell"></i></a>
-                    <!-- User -->
-                    <a href="#" class="text-dark fs-5" title="Account"><i class="bi bi-person"></i></a>
-                </div>
-
-            </div>
-        </nav>
-    </header>
-
-
-
-
-
-    <!-- Main Content -->
-    <main class="py-3">
-
-
-        <div class="container my-4">
-            <div class="row align-items-center justify-content-between">
-
-                <!-- Left: Breadcrumb -->
-                <div class="col-auto">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb mb-0">
-                            <li class="breadcrumb-item">CRM</li>
-                            <li class="breadcrumb-item">Account</li>
-                            <li class="breadcrumb-item active" aria-current="page">Account Details</li>
-                        </ol>
-                    </nav>
-                </div>
-
-                <!-- Right: View options -->
-                <div class="col-auto">
-                    <div class="btn-group" role="group" aria-label="View options">
-
-                        <!-- Day dropdown -->
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Day
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">1 Day</a></li>
-                                <li><a class="dropdown-item" href="#">2 Days</a></li>
-                                <li><a class="dropdown-item" href="#">7 Days</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Week dropdown -->
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Week
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">1 Week</a></li>
-                                <li><a class="dropdown-item" href="#">2 Weeks</a></li>
-                                <li><a class="dropdown-item" href="#">4 Weeks</a></li>
-                            </ul>
-                        </div>
-
-                        <!-- Year dropdown -->
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Year
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">1 Year</a></li>
-                                <li><a class="dropdown-item" href="#">2 Years</a></li>
-                                <li><a class="dropdown-item" href="#">5 Years</a></li>
-                            </ul>
-                        </div>
-
                     </div>
-                </div>
-
-            </div>
-        </div>
-
-
-        <hr>
-
-        <div class="container my-4 pt-5">
-            <div class="row">
-                <!-- Left: 4-column part -->
-                <div class="col-md-4">
-
-                    <!-- First row -->
-                    <div class="border p-2 mb-2 d-flex flex-column justify-content-center" style="height: 100px;">
-                        <strong>TG</strong>
-                        <span>Truck Gear</span>
-                        <span>Business</span>
-
-                        <span>jillali@onechanneladmin.com</span>
-                    </div>
-
-                    <!-- Second row -->
-                    <div class="border p-2 mb-2 d-flex align-items-center justify-content-around"
-                        style="height: 100px;">
-                        <a href="#" class="text-dark" title="Email"><i class="bi bi-envelope"></i> Email</a>
-                        <a href="#" class="text-dark" title="Call"><i class="bi bi-telephone"></i> Call</a>
-                        <a href="#" class="text-dark" title="Message"><i class="bi bi-chat"></i> Message</a>
-                        <a href="#" class="text-dark" title="Calendar"><i class="bi bi-calendar"></i> Calendar</a>
-                    </div>
-
-                    <!-- Third row -->
-                    <div class="border p-3" style="height: 800px; overflow-y: auto;">
-                        <div class="mb-2"><strong>Account Name</strong><br>TRUCK GEAR</div>
-                        <div class="mb-2">
-                            <strong>Email</strong><br>Add<br>Jillali@Onechanneladmin.Com<br>Jillali@Onechanneladmin.Com
-                        </div>
-                        <div class="mb-2"><strong>Phone Number</strong><br>Add<br>+1 344 434 4455<br>+1 344 434 4455
-                        </div>
-                        <div class="mb-2"><strong>Contact Owner</strong><br>Suchithkumar@Onechanneladmin.Com</div>
-                        <div class="mb-2"><strong>Company Type</strong><br>Partner</div>
-                        <div class="mb-2"><strong>Industry</strong><br>Accounting</div>
-                        <div class="mb-2"><strong>Website</strong><br>WWW.TRUCKGEAR.COM</div>
-                        <div class="mb-2"><strong>No of Employees</strong><br>10</div>
-                        <div class="mb-2"><strong>Credit Limit</strong><br>Add<br>$ 5000</div>
-                        <div class="mb-2"><strong>Available Credit</strong><br>Refresh<br>$ 806.71</div>
-                    </div>
-
-                </div>
-
-                <!-- Right: 9-column part -->
-<div class="col-md-8">
-  <!-- Navigation row -->
-  <div class="border p-3 bg-white mb-3">
-    <ul class="navbar-nav flex-row flex-wrap gap-3">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Orders</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Address</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Notes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Tasks</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Contacts</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Credit History</a>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Grid of 4x2 boxes -->
-  <div class="row g-3">
-    <!-- First Row -->
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Total Orders</h6>
-        <h4>123</h4>
-        <p class="mb-0 text-success">28% From The Last Month</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Total Taken</h6>
-        <h4>123</h4>
-        <p class="mb-0 text-success">15% From The Last Month</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Total Revenue</h6>
-        <h4>$1234.99</h4>
-        <p class="mb-0 text-success">28% From The Last Month</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Pending Orders</h6>
-        <h4>$1234.99</h4>
-        <p class="mb-0 text-success">28% From The Last Month</p>
-      </div>
-    </div>
-
-    <!-- Second Row -->
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Pending Returns</h6>
-        <h4>123</h4>
-        <p class="mb-0 text-success">28% From The Last Month</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Pending Returns</h6>
-        <h4>123</h4>
-        <p class="mb-0 text-success">28% From The Last Month</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Pending Returns</h6>
-        <h4>123</h4>
-        <p class="mb-0 text-success">28% From The Last Month</p>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="border rounded p-3 bg-white text-center">
-        <h6>Pending Returns</h6>
-        <h4>123</h4>
-        <p class="mb-0 text-success">28% From The Last Month</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-            </div>
-        </div>
-
-
-
-    </main>
-
-
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5 mt-5">
-        <div class="container">
-            <div class="row">
-                <!-- Company -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Company</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#aboutus" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="#careers" class="text-white text-decoration-none">Careers</a></li>
-                        <li><a href="#press" class="text-white text-decoration-none">Press</a></li>
+                    
+                    <!-- Enhanced Navigation Menu -->
+                    <ul class="nav flex-column p-2">
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white bg-primary rounded-3 shadow-sm" href="#" aria-current="page">
+                                <i class="fas fa-home me-3"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item mt-3">
+                            <h6 class="text-muted px-3 mb-2 text-uppercase small fw-bold">Manage Business</h6>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3 position-relative" href="#">
+                                <i class="fas fa-shopping-bag me-3"></i>Orders
+                                <span class="badge bg-success rounded-pill ms-auto">New</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3" href="#">
+                                <i class="fas fa-undo me-3"></i>Returns
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3" href="#">
+                                <i class="fas fa-tag me-3"></i>Pricing
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3" href="#">
+                                <i class="fas fa-exclamation-triangle me-3"></i>Claims
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3 position-relative" href="#">
+                                <i class="fas fa-boxes me-3"></i>Inventory
+                                <span class="badge bg-danger rounded-pill ms-auto">32</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3" href="#">
+                                <i class="fas fa-upload me-3"></i>Catalog Uploads
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3" href="#">
+                                <i class="fas fa-images me-3"></i>Image Bulk Upload
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3" href="#">
+                                <i class="fas fa-credit-card me-3"></i>Payments
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3 position-relative" href="#">
+                                <i class="fas fa-medal me-3"></i>Quality
+                                <span class="badge bg-info rounded-pill ms-auto">4.5★</span>
+                            </a>
+                        </li>
+                        <li class="nav-item mb-1">
+                            <a class="nav-link text-white-50 rounded-3" href="#">
+                                <i class="fas fa-warehouse me-3"></i>Warehouse
+                            </a>
+                        </li>
                     </ul>
                 </div>
-                <!-- Products -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Products</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#marketplace" class="text-white text-decoration-none">Marketplace</a></li>
-                        <li><a href="#pricing" class="text-white text-decoration-none">Pricing</a></li>
-                        <li><a href="#features" class="text-white text-decoration-none">Features</a></li>
-                    </ul>
-                </div>
-                <!-- Support -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Support</h6>
-                    <ul class="list-unstyled">
-                        <li><a href="#contactUs" class="text-white text-decoration-none">Contact Us</a></li>
-                        <li><a href="#FAQs" class="text-white text-decoration-none">FAQs</a></li>
-                        <li><a href="#terms" class="text-white text-decoration-none">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <!-- Social -->
-                <div class="col-6 col-md-3 mb-3">
-                    <h6 class="text-uppercase">Follow us</h6>
-                    <div class="d-flex gap-3">
-                        <a href="https://facebook.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="text-white fs-5"
-                            title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </nav>
+
+            <!-- Enhanced Main Content -->
+            <main class="col-md-10 ms-sm-auto px-md-4">
+                <!-- Enhanced Header -->
+                <div class="py-4 border-bottom bg-white rounded-3 shadow-sm my-3 px-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h2 class="h3 mb-1 text-primary">Welcome back, --Beebay--</h2>
+                            <p class="text-muted mb-0">Manage and grow your business with Meesho</p>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary">
+                                <i class="fas fa-chart-line me-2"></i>Analytics
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus me-2"></i>Add Product
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Enhanced Return Policy Alert -->
+                <div class="alert alert-warning d-flex align-items-center mt-4 shadow-sm border-0" role="alert">
+                    <div class="me-3">
+                        <i class="fas fa-box fa-3x text-warning"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h5 class="alert-heading mb-2 fw-bold">Introducing Returnless Refunds Policy - Mandatory for all sellers!</h5>
+                        <p class="mb-0">For select cases of damaged, defective, poor-quality, or incorrect products, only trusted users will get a refund without returning the item.</p>
+                    </div>
+                    <button type="button" class="btn btn-warning fw-bold">
+                        <i class="fas fa-eye me-2"></i>View Returns
+                    </button>
+                </div>
+
+                <!-- Enhanced Quick Stats Row -->
+                <div class="row mt-4">
+                    <div class="col-md-3 mb-3">
+                        <div class="card border-0 shadow-sm bg-gradient">
+                            <div class="card-body text-center">
+                                <div class="bg-success bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-rupee-sign fa-lg text-success"></i>
+                                </div>
+                                <h4 class="text-success mb-1">₹24,567</h4>
+                                <p class="text-muted mb-0">Total Revenue</p>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up"></i> +12% from last month
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card border-0 shadow-sm bg-gradient">
+                            <div class="card-body text-center">
+                                <div class="bg-info bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-shopping-cart fa-lg text-info"></i>
+                                </div>
+                                <h4 class="text-info mb-1">147</h4>
+                                <p class="text-muted mb-0">Total Orders</p>
+                                <small class="text-info">
+                                    <i class="fas fa-arrow-up"></i> +8% from last week
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card border-0 shadow-sm bg-gradient">
+                            <div class="card-body text-center">
+                                <div class="bg-warning bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-star fa-lg text-warning"></i>
+                                </div>
+                                <h4 class="text-warning mb-1">4.5</h4>
+                                <p class="text-muted mb-0">Seller Rating</p>
+                                <small class="text-warning">
+                                    <i class="fas fa-star"></i> Based on 89 reviews
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <div class="card border-0 shadow-sm bg-gradient">
+                            <div class="card-body text-center">
+                                <div class="bg-primary bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-boxes fa-lg text-primary"></i>
+                                </div>
+                                <h4 class="text-primary mb-1">234</h4>
+                                <p class="text-muted mb-0">Total Products</p>
+                                <small class="text-primary">
+                                    <i class="fas fa-plus"></i> 5 added this week
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <!-- Enhanced To Do List -->
+                    <div class="col-md-8">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="card-title mb-0">
+                                    <i class="fas fa-clipboard-list me-2"></i>Action Items
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <div class="card text-center border-warning h-100">
+                                            <div class="card-body">
+                                                <div class="bg-warning bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                                    <i class="fas fa-clock fa-lg text-warning"></i>
+                                                </div>
+                                                <h6 class="text-muted">Pending Orders</h6>
+                                                <h3 class="text-warning mb-2">1</h3>
+                                                <button class="btn btn-outline-warning btn-sm">
+                                                    <i class="fas fa-eye"></i> View
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center border-info h-100">
+                                            <div class="card-body">
+                                                <div class="bg-info bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                                    <i class="fas fa-download fa-lg text-info"></i>
+                                                </div>
+                                                <h6 class="text-muted">Download Labels</h6>
+                                                <h3 class="text-info mb-2">1</h3>
+                                                <button class="btn btn-outline-info btn-sm">
+                                                    <i class="fas fa-download"></i> Download
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center border-danger h-100">
+                                            <div class="card-body">
+                                                <div class="bg-danger bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                                    <i class="fas fa-exclamation-triangle fa-lg text-danger"></i>
+                                                </div>
+                                                <h6 class="text-muted">Out of Stock</h6>
+                                                <h3 class="text-danger mb-2">32</h3>
+                                                <button class="btn btn-outline-danger btn-sm">
+                                                    <i class="fas fa-plus"></i> Restock
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="card text-center border-success h-100">
+                                            <div class="card-body">
+                                                <div class="bg-success bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                                    <i class="fas fa-chart-line fa-lg text-success"></i>
+                                                </div>
+                                                <h6 class="text-muted">Low Stock</h6>
+                                                <h3 class="text-success mb-2">0</h3>
+                                                <button class="btn btn-outline-success btn-sm">
+                                                    <i class="fas fa-check"></i> All Good
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Account Setup -->
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-header bg-light">
+                                <h5 class="card-title mb-0 text-primary">
+                                    <i class="fas fa-user-cog me-2"></i>Complete Account Setup
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="progress mb-3" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
+                                </div>
+                                <p class="text-muted mb-3">75% Complete - Add the below information to improve your selling journey</p>
+                                
+                                <div class="d-flex align-items-center p-3 bg-light rounded-3 mb-3">
+                                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                        <i class="fas fa-building text-white"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Add Business Type</h6>
+                                        <small class="text-muted">Help us understand your business better</small>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-muted"></i>
+                                </div>
+                                
+                                <div class="d-flex align-items-center p-3 bg-light rounded-3 mb-3">
+                                    <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                                        <i class="fas fa-check text-white"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Bank Details Added</h6>
+                                        <small class="text-success">Completed</small>
+                                    </div>
+                                    <i class="fas fa-check-circle text-success"></i>
+                                </div>
+                                
+                                <button class="btn btn-primary w-100">
+                                    <i class="fas fa-arrow-right me-2"></i>Complete Setup
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Business Insights -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-gradient d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0 text-primary">
+                                    <i class="fas fa-chart-bar me-2"></i>Business Intelligence & Insights
+                                </h5>
+                                <div class="d-flex gap-2">
+                                    <span class="badge bg-success">Free Trial</span>
+                                    <button type="button" class="btn btn-primary">
+                                        <i class="fas fa-rocket me-2"></i>Try free for 30 days
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card border-danger h-100">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="me-3">
+                                                        <div class="bg-danger bg-opacity-10 rounded-3 p-3">
+                                                            <i class="fas fa-exclamation-triangle fa-2x text-danger"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 fw-bold">Catalog 139566875</h6>
+                                                        <p class="text-danger mb-1 fw-bold">
+                                                            <i class="fas fa-warning me-1"></i>Risk of getting blocked
+                                                        </p>
+                                                        <small class="text-muted">Due to low customer ratings (2.1/5)</small>
+                                                        <div class="mt-2">
+                                                            <button class="btn btn-outline-danger btn-sm me-2">
+                                                                <i class="fas fa-eye"></i> View Details
+                                                            </button>
+                                                            <button class="btn btn-danger btn-sm">
+                                                                <i class="fas fa-tools"></i> Fix Issues
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card border-success h-100">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center">
+                                                    <div class="me-3">
+                                                        <div class="bg-success bg-opacity-10 rounded-3 p-3">
+                                                            <i class="fas fa-chart-line fa-2x text-success"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        <h6 class="mb-1 fw-bold">Catalog 140530172</h6>
+                                                        <p class="text-success mb-1 fw-bold">
+                                                            <i class="fas fa-arrow-up me-1"></i>Orders increased in last 7 days
+                                                        </p>
+                                                        <small class="text-muted">Total orders: 2 <span class="text-success fw-bold">▲ 100%</span></small>
+                                                        <div class="mt-2">
+                                                            <button class="btn btn-outline-success btn-sm me-2">
+                                                                <i class="fas fa-eye"></i> View Details
+                                                            </button>
+                                                            <button class="btn btn-success btn-sm">
+                                                                <i class="fas fa-rocket"></i> Boost More
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <div class="alert alert-info border-0">
+                                            <i class="fas fa-info-circle me-2"></i>
+                                            <strong>Tip:</strong> View this catalog for more details and improvement suggestions
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alert alert-warning border-0">
+                                            <i class="fas fa-chart-pie me-2"></i>
+                                            <strong>More Insights:</strong> +12 more fluctuations in your business
+                                            <button class="btn btn-sm btn-outline-warning ms-2">View All</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Section -->
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-header bg-light">
+                                <h5 class="card-title mb-0">
+                                    <i class="fas fa-clock me-2"></i>Recent Activity
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center p-3 bg-light rounded-3">
+                                            <div class="bg-success rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-shopping-cart text-white"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">New Order Received</h6>
+                                                <small class="text-muted">Order #12345 - 2 minutes ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center p-3 bg-light rounded-3">
+                                            <div class="bg-info rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-star text-white"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">New Review</h6>
+                                                <small class="text-muted">5-star rating - 15 minutes ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex align-items-center p-3 bg-light rounded-3">
+                                            <div class="bg-warning rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                                <i class="fas fa-exclamation-triangle text-white"></i>
+                                            </div>
+                                            <div>
+                                                <h6 class="mb-0">Stock Alert</h6>
+                                                <small class="text-muted">Product running low - 1 hour ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <footer class="mt-5 py-4 border-top">
+                    <div class="text-center text-muted">
+                        <p class="mb-0">&copy; 2025 Beebay All rights reserved. | <a href="#" class="text-decoration-none">Privacy Policy</a> | <a href="#" class="text-decoration-none">Terms of Service</a></p>
+                    </div>
+                </footer>
+            </main>
         </div>
-    </footer>
+    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>
