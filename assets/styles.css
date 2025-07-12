@@ -1,17 +1,8 @@
-.img-homescreen img {
-    height: 280px;
-    object-fit: cover;
+.first-img {
+  height: 280px;
+  object-fit: cover; /* Important to keep image proportionate and crop nicely */
 }
 
-
-.flash-image {
-    width: 350px;
-}
-
-.flash-box {
-    gap: 1rem;
-    scroll-behavior: smooth;
-}
 
 .second-img-div {
     height: 500px;
