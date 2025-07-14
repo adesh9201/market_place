@@ -3,457 +3,452 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="favicon.png" />
-<meta name="theme-color" content="#ff5c8d" />
-
-    <title>Marketplace Vendor Dashboard</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
+    <title>FiberConnect - Vendor Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="https://example.com/favicon.ico">
+    <meta name="theme-color" content="#0d6efd">
 </head>
 <body class="bg-light">
     <div class="container-fluid">
         <div class="row">
-            <!-- Enhanced Sidebar -->
-            <nav class="col-md-2 d-md-block bg-dark sidebar p-0 shadow-lg" style="min-height: 100vh;">
-                <div class="position-sticky">
-                    <!-- Enhanced User Profile -->
-                    <div class="bg-primary p-4 text-white">
-                        <div class="d-flex align-items-center">
-                            <div class="bg-white text-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;">
-                                <i class="fas fa-user-tie fa-lg"></i>
-                            </div>
-                            <div>
-                                <h6 class="mb-0 text-white">--Beebay--</h6>
-                                <small class="text-white-50">Premium Seller</small>
-                            </div>
+            <!-- Sidebar -->
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <!-- Vendor Profile -->
+                    <div class="text-center p-4 bg-primary bg-gradient text-white rounded-3 mb-3">
+                        <div class="mb-3">
+                            <i class="fas fa-user-circle fa-4x"></i>
                         </div>
-                    </div>
-                    
-                    <!-- Enhanced Notifications -->
-                    <div class="bg-danger p-3 text-white d-flex justify-content-between align-items-center">
-                        <span class="d-flex align-items-center">
-                            <i class="fas fa-bell me-2"></i>
-                            <span class="badge bg-warning text-dark rounded-pill me-2">2</span>
-                            Notices
+                        <h5 class="mb-1">FiberTech Solutions</h5>
+                        <p class="small mb-2">Premium Fiber Vendor</p>
+                        <span class="badge bg-warning text-dark">
+                            <i class="fas fa-star"></i> Top Rated
                         </span>
-                        <button class="btn btn-outline-light btn-sm">
-                            <i class="fas fa-headset me-1"></i>Support
-                        </button>
                     </div>
                     
-                    <!-- Enhanced Navigation Menu -->
-                    <ul class="nav flex-column p-2">
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white bg-primary rounded-3 shadow-sm" href="#" aria-current="page">
-                                <i class="fas fa-home me-3"></i>Dashboard
+                    <!-- Navigation Menu -->
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white bg-primary rounded mb-1" href="#">
+                                <i class="fas fa-tachometer-alt me-2"></i> Dashboard
                             </a>
                         </li>
-                        <li class="nav-item mt-3">
-                            <h6 class="text-muted px-3 mb-2 text-uppercase small fw-bold">Manage Business</h6>
-                        </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3 position-relative" href="#">
-                                <i class="fas fa-shopping-bag me-3"></i>Orders
-                                <span class="badge bg-success rounded-pill ms-auto">New</span>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-box-open me-2"></i> Products
                             </a>
                         </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3" href="#">
-                                <i class="fas fa-undo me-3"></i>Returns
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-shopping-cart me-2"></i> Orders
+                                <span class="badge bg-success float-end">15</span>
                             </a>
                         </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3" href="#">
-                                <i class="fas fa-tag me-3"></i>Pricing
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-exchange-alt me-2"></i> Transactions
                             </a>
                         </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3" href="#">
-                                <i class="fas fa-exclamation-triangle me-3"></i>Claims
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-chart-line me-2"></i> Analytics
                             </a>
                         </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3 position-relative" href="#">
-                                <i class="fas fa-boxes me-3"></i>Inventory
-                                <span class="badge bg-danger rounded-pill ms-auto">32</span>
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-warehouse me-2"></i> Inventory
+                                <span class="badge bg-danger float-end">8</span>
                             </a>
                         </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3" href="#">
-                                <i class="fas fa-upload me-3"></i>Catalog Uploads
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-truck me-2"></i> Shipping
                             </a>
                         </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3" href="#">
-                                <i class="fas fa-images me-3"></i>Image Bulk Upload
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-file-invoice-dollar me-2"></i> Invoices
                             </a>
                         </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3" href="#">
-                                <i class="fas fa-credit-card me-3"></i>Payments
-                            </a>
-                        </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3 position-relative" href="#">
-                                <i class="fas fa-medal me-3"></i>Quality
-                                <span class="badge bg-info rounded-pill ms-auto">4.5★</span>
-                            </a>
-                        </li>
-                        <li class="nav-item mb-1">
-                            <a class="nav-link text-white-50 rounded-3" href="#">
-                                <i class="fas fa-warehouse me-3"></i>Warehouse
+                        <li class="nav-item">
+                            <a class="nav-link text-white-50 mb-1" href="#">
+                                <i class="fas fa-cog me-2"></i> Settings
                             </a>
                         </li>
                     </ul>
+                    
+                    <!-- Support Section -->
+                    <div class="mt-4 p-3 bg-secondary rounded">
+                        <h6 class="text-white mb-2">Need Help?</h6>
+                        <button class="btn btn-sm btn-warning w-100 mb-2">
+                            <i class="fas fa-headset me-1"></i> Live Chat
+                        </button>
+                        <button class="btn btn-sm btn-outline-light w-100">
+                            <i class="fas fa-envelope me-1"></i> Email Support
+                        </button>
+                    </div>
                 </div>
             </nav>
 
-            <!-- Enhanced Main Content -->
-            <main class="col-md-10 ms-sm-auto px-md-4">
-                <!-- Enhanced Header -->
-                <div class="py-4 border-bottom bg-white rounded-3 shadow-sm my-3 px-4">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div>
-                            <h2 class="h3 mb-1 text-primary">Welcome back, --Beebay--</h2>
-                            <p class="text-muted mb-0">Manage and grow your business with Meesho</p>
-                        </div>
-                        <div class="d-flex gap-2">
-                            <button class="btn btn-outline-primary">
-                                <i class="fas fa-chart-line me-2"></i>Analytics
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- Top Navigation -->
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Vendor Dashboard</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                <i class="fas fa-download me-1"></i> Export
                             </button>
-                            <button class="btn btn-primary">
-                                <i class="fas fa-plus me-2"></i>Add Product
+                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                                <i class="fas fa-print me-1"></i> Print
                             </button>
                         </div>
+                        <button type="button" class="btn btn-sm btn-primary">
+                            <i class="fas fa-plus me-1"></i> Add Product
+                        </button>
                     </div>
                 </div>
 
-                <!-- Enhanced Return Policy Alert -->
-                <div class="alert alert-warning d-flex align-items-center mt-4 shadow-sm border-0" role="alert">
-                    <div class="me-3">
-                        <i class="fas fa-box fa-3x text-warning"></i>
-                    </div>
-                    <div class="flex-grow-1">
-                        <h5 class="alert-heading mb-2 fw-bold">Introducing Returnless Refunds Policy - Mandatory for all sellers!</h5>
-                        <p class="mb-0">For select cases of damaged, defective, poor-quality, or incorrect products, only trusted users will get a refund without returning the item.</p>
-                    </div>
-                    <button type="button" class="btn btn-warning fw-bold">
-                        <i class="fas fa-eye me-2"></i>View Returns
-                    </button>
-                </div>
-
-                <!-- Enhanced Quick Stats Row -->
-                <div class="row mt-4">
+                <!-- Stats Cards -->
+                <div class="row mb-4">
                     <div class="col-md-3 mb-3">
-                        <div class="card border-0 shadow-sm bg-gradient">
-                            <div class="card-body text-center">
-                                <div class="bg-success bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                    <i class="fas fa-rupee-sign fa-lg text-success"></i>
+                        <div class="card bg-primary text-white h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Total Revenue</h6>
+                                        <h3 class="card-text">₹1,24,567</h3>
+                                        <span class="badge bg-light text-primary">
+                                            <i class="fas fa-arrow-up"></i> 12.5%
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-rupee-sign fa-3x opacity-50"></i>
                                 </div>
-                                <h4 class="text-success mb-1">₹24,567</h4>
-                                <p class="text-muted mb-0">Total Revenue</p>
-                                <small class="text-success">
-                                    <i class="fas fa-arrow-up"></i> +12% from last month
-                                </small>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <div class="card border-0 shadow-sm bg-gradient">
-                            <div class="card-body text-center">
-                                <div class="bg-info bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                    <i class="fas fa-shopping-cart fa-lg text-info"></i>
+                        <div class="card bg-success text-white h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Total Orders</h6>
+                                        <h3 class="card-text">147</h3>
+                                        <span class="badge bg-light text-success">
+                                            <i class="fas fa-arrow-up"></i> 8.2%
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-shopping-cart fa-3x opacity-50"></i>
                                 </div>
-                                <h4 class="text-info mb-1">147</h4>
-                                <p class="text-muted mb-0">Total Orders</p>
-                                <small class="text-info">
-                                    <i class="fas fa-arrow-up"></i> +8% from last week
-                                </small>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <div class="card border-0 shadow-sm bg-gradient">
-                            <div class="card-body text-center">
-                                <div class="bg-warning bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                    <i class="fas fa-star fa-lg text-warning"></i>
+                        <div class="card bg-warning text-dark h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Avg. Rating</h6>
+                                        <h3 class="card-text">4.7/5</h3>
+                                        <span class="badge bg-light text-warning">
+                                            <i class="fas fa-star"></i> 89 reviews
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-star fa-3x opacity-50"></i>
                                 </div>
-                                <h4 class="text-warning mb-1">4.5</h4>
-                                <p class="text-muted mb-0">Seller Rating</p>
-                                <small class="text-warning">
-                                    <i class="fas fa-star"></i> Based on 89 reviews
-                                </small>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3 mb-3">
-                        <div class="card border-0 shadow-sm bg-gradient">
-                            <div class="card-body text-center">
-                                <div class="bg-primary bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                    <i class="fas fa-boxes fa-lg text-primary"></i>
+                        <div class="card bg-info text-white h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="card-title">Products</h6>
+                                        <h3 class="card-text">42</h3>
+                                        <span class="badge bg-light text-info">
+                                            <i class="fas fa-box"></i> 8 categories
+                                        </span>
+                                    </div>
+                                    <i class="fas fa-boxes fa-3x opacity-50"></i>
                                 </div>
-                                <h4 class="text-primary mb-1">234</h4>
-                                <p class="text-muted mb-0">Total Products</p>
-                                <small class="text-primary">
-                                    <i class="fas fa-plus"></i> 5 added this week
-                                </small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row mt-4">
-                    <!-- Enhanced To Do List -->
+                <!-- Fiber Products Section -->
+                <div class="row mb-4">
                     <div class="col-md-8">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-header bg-primary text-white">
-                                <h5 class="card-title mb-0">
-                                    <i class="fas fa-clipboard-list me-2"></i>Action Items
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-network-wired me-2"></i> Fiber Products Performance
                                 </h5>
                             </div>
                             <div class="card-body">
-                                <div class="row g-3">
-                                    <div class="col-md-3">
-                                        <div class="card text-center border-warning h-100">
-                                            <div class="card-body">
-                                                <div class="bg-warning bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                                    <i class="fas fa-clock fa-lg text-warning"></i>
-                                                </div>
-                                                <h6 class="text-muted">Pending Orders</h6>
-                                                <h3 class="text-warning mb-2">1</h3>
-                                                <button class="btn btn-outline-warning btn-sm">
-                                                    <i class="fas fa-eye"></i> View
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="card text-center border-info h-100">
-                                            <div class="card-body">
-                                                <div class="bg-info bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                                    <i class="fas fa-download fa-lg text-info"></i>
-                                                </div>
-                                                <h6 class="text-muted">Download Labels</h6>
-                                                <h3 class="text-info mb-2">1</h3>
-                                                <button class="btn btn-outline-info btn-sm">
-                                                    <i class="fas fa-download"></i> Download
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="card text-center border-danger h-100">
-                                            <div class="card-body">
-                                                <div class="bg-danger bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                                    <i class="fas fa-exclamation-triangle fa-lg text-danger"></i>
-                                                </div>
-                                                <h6 class="text-muted">Out of Stock</h6>
-                                                <h3 class="text-danger mb-2">32</h3>
-                                                <button class="btn btn-outline-danger btn-sm">
-                                                    <i class="fas fa-plus"></i> Restock
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="card text-center border-success h-100">
-                                            <div class="card-body">
-                                                <div class="bg-success bg-opacity-10 rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                                    <i class="fas fa-chart-line fa-lg text-success"></i>
-                                                </div>
-                                                <h6 class="text-muted">Low Stock</h6>
-                                                <h3 class="text-success mb-2">0</h3>
-                                                <button class="btn btn-outline-success btn-sm">
-                                                    <i class="fas fa-check"></i> All Good
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Category</th>
+                                                <th>Orders</th>
+                                                <th>Revenue</th>
+                                                <th>Rating</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <strong>OM4 Fiber Cable</strong>
+                                                    <br>
+                                                    <small class="text-muted">50m, LC Connector</small>
+                                                </td>
+                                                <td>Fiber Cables</td>
+                                                <td>24</td>
+                                                <td>₹84,500</td>
+                                                <td>
+                                                    <span class="badge bg-success">4.8</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary" aria-label="View Product Performance">
+                                                        <i class="fas fa-chart-line"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Fiber Patch Panel</strong>
+                                                    <br>
+                                                    <small class="text-muted">24 Port, Rack Mount</small>
+                                                </td>
+                                                <td>Networking</td>
+                                                <td>18</td>
+                                                <td>₹67,200</td>
+                                                <td>
+                                                    <span class="badge bg-success">4.6</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary" aria-label="View Product Performance">
+                                                        <i class="fas fa-chart-line"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Fiber Optic Tester</strong>
+                                                    <br>
+                                                    <small class="text-muted">850/1300nm</small>
+                                                </td>
+                                                <td>Testing Equipment</td>
+                                                <td>12</td>
+                                                <td>₹45,600</td>
+                                                <td>
+                                                    <span class="badge bg-warning text-dark">4.2</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary" aria-label="View Product Performance">
+                                                        <i class="fas fa-chart-line"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>SFP+ Transceiver</strong>
+                                                    <br>
+                                                    <small class="text-muted">10G, 850nm, MMF</small>
+                                                </td>
+                                                <td>Transceivers</td>
+                                                <td>9</td>
+                                                <td>₹36,750</td>
+                                                <td>
+                                                    <span class="badge bg-danger">3.9</span>
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary" aria-label="View Product Performance">
+                                                        <i class="fas fa-chart-line"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <small class="text-muted">Showing 4 of 42 products</small>
+                                    <a href="#" class="btn btn-sm btn-outline-primary">
+                                        View All Products <i class="fas fa-arrow-right ms-1"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Enhanced Account Setup -->
+                    
+                    <!-- Quick Actions -->
                     <div class="col-md-4">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="card-header bg-light">
-                                <h5 class="card-title mb-0 text-primary">
-                                    <i class="fas fa-user-cog me-2"></i>Complete Account Setup
+                        <div class="card mb-4">
+                            <div class="card-header bg-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-bolt me-2"></i> Quick Actions
                                 </h5>
                             </div>
                             <div class="card-body">
-                                <div class="progress mb-3" style="height: 10px;">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 75%"></div>
-                                </div>
-                                <p class="text-muted mb-3">75% Complete - Add the below information to improve your selling journey</p>
-                                
-                                <div class="d-flex align-items-center p-3 bg-light rounded-3 mb-3">
-                                    <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
-                                        <i class="fas fa-building text-white"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">Add Business Type</h6>
-                                        <small class="text-muted">Help us understand your business better</small>
-                                    </div>
-                                    <i class="fas fa-chevron-right text-muted"></i>
-                                </div>
-                                
-                                <div class="d-flex align-items-center p-3 bg-light rounded-3 mb-3">
-                                    <div class="bg-success rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
-                                        <i class="fas fa-check text-white"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">Bank Details Added</h6>
-                                        <small class="text-success">Completed</small>
-                                    </div>
-                                    <i class="fas fa-check-circle text-success"></i>
-                                </div>
-                                
-                                <button class="btn btn-primary w-100">
-                                    <i class="fas fa-arrow-right me-2"></i>Complete Setup
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Enhanced Business Insights -->
-                <div class="row mt-4">
-                    <div class="col-12">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-header bg-gradient d-flex justify-content-between align-items-center">
-                                <h5 class="card-title mb-0 text-primary">
-                                    <i class="fas fa-chart-bar me-2"></i>Business Intelligence & Insights
-                                </h5>
-                                <div class="d-flex gap-2">
-                                    <span class="badge bg-success">Free Trial</span>
-                                    <button type="button" class="btn btn-primary">
-                                        <i class="fas fa-rocket me-2"></i>Try free for 30 days
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-primary text-start">
+                                        <i class="fas fa-plus-circle me-2"></i> Add New Product
+                                    </button>
+                                    <button class="btn btn-success text-start">
+                                        <i class="fas fa-truck me-2"></i> Process Orders (15)
+                                    </button>
+                                    <button class="btn btn-warning text-start">
+                                        <i class="fas fa-exclamation-triangle me-2"></i> Low Stock Items (8)
+                                    </button>
+                                    <button class="btn btn-info text-start">
+                                        <i class="fas fa-file-invoice me-2"></i> Generate Reports
+                                    </button>
+                                    <button class="btn btn-danger text-start">
+                                        <i class="fas fa-star me-2"></i> Respond to Reviews
                                     </button>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <!-- Recent Orders -->
+                        <div class="card">
+                            <div class="card-header bg-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-clock me-2"></i> Recent Orders
+                                </h5>
+                            </div>
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <div class="card border-danger h-100">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-3">
-                                                        <div class="bg-danger bg-opacity-10 rounded-3 p-3">
-                                                            <i class="fas fa-exclamation-triangle fa-2x text-danger"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <h6 class="mb-1 fw-bold">Catalog 139566875</h6>
-                                                        <p class="text-danger mb-1 fw-bold">
-                                                            <i class="fas fa-warning me-1"></i>Risk of getting blocked
-                                                        </p>
-                                                        <small class="text-muted">Due to low customer ratings (2.1/5)</small>
-                                                        <div class="mt-2">
-                                                            <button class="btn btn-outline-danger btn-sm me-2">
-                                                                <i class="fas fa-eye"></i> View Details
-                                                            </button>
-                                                            <button class="btn btn-danger btn-sm">
-                                                                <i class="fas fa-tools"></i> Fix Issues
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Order #FBR-1254</h6>
+                                            <small class="text-success">Completed</small>
                                         </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <div class="card border-success h-100">
-                                            <div class="card-body">
-                                                <div class="d-flex align-items-center">
-                                                    <div class="me-3">
-                                                        <div class="bg-success bg-opacity-10 rounded-3 p-3">
-                                                            <i class="fas fa-chart-line fa-2x text-success"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="flex-grow-1">
-                                                        <h6 class="mb-1 fw-bold">Catalog 140530172</h6>
-                                                        <p class="text-success mb-1 fw-bold">
-                                                            <i class="fas fa-arrow-up me-1"></i>Orders increased in last 7 days
-                                                        </p>
-                                                        <small class="text-muted">Total orders: 2 <span class="text-success fw-bold">▲ 100%</span></small>
-                                                        <div class="mt-2">
-                                                            <button class="btn btn-outline-success btn-sm me-2">
-                                                                <i class="fas fa-eye"></i> View Details
-                                                            </button>
-                                                            <button class="btn btn-success btn-sm">
-                                                                <i class="fas fa-rocket"></i> Boost More
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <p class="mb-1">OM4 Fiber Cable (3 items)</p>
+                                        <small class="text-muted">₹12,450 • 2 days ago</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Order #FBR-1253</h6>
+                                            <small class="text-warning">Processing</small>
                                         </div>
-                                    </div>
+                                        <p class="mb-1">Fiber Patch Panel (1 item)</p>
+                                        <small class="text-muted">₹8,750 • 3 days ago</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Order #FBR-1252</h6>
+                                            <small class="text-primary">Shipped</small>
+                                        </div>
+                                        <p class="mb-1">SFP+ Transceivers (5 items)</p>
+                                        <small class="text-muted">₹15,250 • 5 days ago</small>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <h6 class="mb-1">Order #FBR-1251</h6>
+                                            <small class="text-danger">Returned</small>
+                                        </div>
+                                        <p class="mb-1">Fiber Optic Tester (1 item)</p>
+                                        <small class="text-muted">₹9,800 • 1 week ago</small>
+                                    </a>
                                 </div>
-                                <div class="row mt-3">
-                                    <div class="col-md-6">
-                                        <div class="alert alert-info border-0">
-                                            <i class="fas fa-info-circle me-2"></i>
-                                            <strong>Tip:</strong> View this catalog for more details and improvement suggestions
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="alert alert-warning border-0">
-                                            <i class="fas fa-chart-pie me-2"></i>
-                                            <strong>More Insights:</strong> +12 more fluctuations in your business
-                                            <button class="btn btn-sm btn-outline-warning ms-2">View All</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                <a href="#" class="btn btn-sm btn-outline-primary w-100 mt-3">
+                                    View All Orders <i class="fas fa-arrow-right ms-1"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Recent Activity Section -->
-                <div class="row mt-4">
+                
+                <!-- Fiber Market Insights -->
+                <div class="row mb-4">
                     <div class="col-12">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-header bg-light">
-                                <h5 class="card-title mb-0">
-                                    <i class="fas fa-clock me-2"></i>Recent Activity
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">
+                                    <i class="fas fa-chart-pie me-2"></i> Fiber Market Insights
                                 </h5>
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="d-flex align-items-center p-3 bg-light rounded-3">
-                                            <div class="bg-success rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                                <i class="fas fa-shopping-cart text-white"></i>
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-0">New Order Received</h6>
-                                                <small class="text-muted">Order #12345 - 2 minutes ago</small>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h6 class="card-title text-primary">
+                                                    <i class="fas fa-fire me-2"></i> Trending Products
+                                                </h6>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        OM3 Fiber Cable
+                                                        <span class="badge bg-primary rounded-pill">+32%</span>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        Fiber Optic Cleaver
+                                                        <span class="badge bg-primary rounded-pill">+28%</span>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        10G SFP+ Modules
+                                                        <span class="badge bg-primary rounded-pill">+25%</span>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        Fiber Termination Kit
+                                                        <span class="badge bg-primary rounded-pill">+18%</span>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="d-flex align-items-center p-3 bg-light rounded-3">
-                                            <div class="bg-info rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                                <i class="fas fa-star text-white"></i>
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-0">New Review</h6>
-                                                <small class="text-muted">5-star rating - 15 minutes ago</small>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h6 class="card-title text-success">
+                                                    <i class="fas fa-bullseye me-2"></i> Top Buyers
+                                                </h6>
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        Telecom Solutions Ltd.
+                                                        <span class="badge bg-success rounded-pill">₹2.4L</span>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        DataNet Systems
+                                                        <span class="badge bg-success rounded-pill">₹1.8L</span>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        FiberConnect ISP
+                                                        <span class="badge bg-success rounded-pill">₹1.2L</span>
+                                                    </li>
+                                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                                        Network Builders Inc.
+                                                        <span class="badge bg-success rounded-pill">₹98K</span>
+                                                    </li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="d-flex align-items-center p-3 bg-light rounded-3">
-                                            <div class="bg-warning rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                                <i class="fas fa-exclamation-triangle text-white"></i>
-                                            </div>
-                                            <div>
-                                                <h6 class="mb-0">Stock Alert</h6>
-                                                <small class="text-muted">Product running low - 1 hour ago</small>
+                                    <div class="col-md-4 mb-3">
+                                        <div class="card h-100 border-0 shadow-sm">
+                                            <div class="card-body">
+                                                <h6 class="card-title text-info">
+                                                    <i class="fas fa-lightbulb me-2"></i> Recommendations
+                                                </h6>
+                                                <div class="alert alert-info">
+                                                    <i class="fas fa-info-circle me-2"></i> 
+                                                    Add more 10G transceivers to meet growing demand
+                                                </div>
+                                                <div class="alert alert-warning">
+                                                    <i class="fas fa-exclamation-triangle me-2"></i> 
+                                                    Improve packaging for fiber testers to reduce returns
+                                                </div>
+                                                <div class="alert alert-success">
+                                                    <i class="fas fa-check-circle me-2"></i> 
+                                                    Your OM4 cables are priced 12% below market average
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -462,17 +457,26 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Footer -->
-                <footer class="mt-5 py-4 border-top">
-                    <div class="text-center text-muted">
-                        <p class="mb-0">&copy; 2025 Beebay All rights reserved. | <a href="#" class="text-decoration-none">Privacy Policy</a> | <a href="#" class="text-decoration-none">Terms of Service</a></p>
+                <footer class="pt-3 mt-4 text-muted border-top">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="mb-1">
+                                &copy; 2025 FiberConnect B2B Marketplace. All rights reserved.
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-md-end">
+                            <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                            <a href="#" class="text-decoration-none me-3">Terms of Service</a>
+                            <a href="#" class="text-decoration-none">Vendor Agreement</a>
+                        </div>
                     </div>
                 </footer>
             </main>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

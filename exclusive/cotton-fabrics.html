@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FabricExclusive - Premium Fabrics Marketplace</title>
 
   <!-- Bootstrap CSS -->
@@ -12,1096 +12,324 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --primary-color: #6a4c93;
-      --secondary-color: #f8f9fa;
-      --accent-color: #ff7b25;
-      --dark-color: #2b2d42;
-      --light-color: #f8f7ff;
-      --text-color: #333;
-      --text-light: #6c757d;
-    }
+  <link rel="stylesheet" href="/assets/styles.css">
 
-    body {
-      background-color: #ffffff;
-      font-family: 'Poppins', sans-serif;
-      color: var(--text-color);
-      line-height: 1.6;
-      padding-top: 60px;
-    }
-
-    /* Header Styles */
-    header.bg-dark {
-      background-color: var(--dark-color) !important;
-      font-size: 0.9rem;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Navigation Bar */
-    .navbar {
-      padding: 1rem 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      background-color: white !important;
-    }
-
-    .navbar-brand {
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--primary-color) !important;
-    }
-
-    .nav-link {
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      transition: all 0.3s ease;
-      color: var(--text-color);
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: var(--primary-color) !important;
-    }
-
-    /* Search Bar */
-    .form-control {
-      border-radius: 50px;
-      padding: 0.5rem 1rem;
-      border: 1px solid #e0e0e0;
-    }
-
-    .btn-outline-secondary {
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-color: #e0e0e0;
-    }
-
-    /* Category Links */
-    .list-unstyled li {
-      margin-bottom: 0.75rem;
-      transition: all 0.3s ease;
-    }
-
-    .list-unstyled li:hover {
-      transform: translateX(5px);
-    }
-
-    .list-unstyled li a {
-      transition: all 0.3s ease;
-      color: var(--text-color);
-    }
-
-    .list-unstyled li:hover a {
-      color: var(--primary-color) !important;
-    }
-
-    /* Main Images */
-    .first-img {
-      height: 280px;
-      object-fit: cover;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.5s ease;
-    }
-
-    .first-img:hover {
-      transform: scale(1.02);
-    }
-
-    .second-img-div {
-      height: 500px;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .second-img {
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-
-    .second-img:hover {
-      transform: scale(1.05);
-    }
-
-    /* Flash Sales Header */
-    .bg-light {
-      background-color: var(--light-color) !important;
-      border-radius: 10px;
-    }
-
-    .text-danger {
-      color: var(--accent-color) !important;
-    }
-
-    /* Cards */
-    .card {
-      border: none;
-      border-radius: 10px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      margin-bottom: 1.5rem;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(106, 76, 147, 0.2);
-    }
-
-    .card-img-top {
-      transition: transform 0.5s ease;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card:hover .card-img-top {
-      transform: scale(1.1);
-    }
-
-    .card-body {
-      padding: 1.25rem;
-    }
-
-    .card-body h6 {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Discount Badge */
-    .position-absolute.bg-danger {
-      background-color: var(--accent-color) !important;
-      font-size: 0.8rem;
-      font-weight: 600;
-      padding: 0.25rem 0.75rem;
-      z-index: 1;
-    }
-
-    /* Action Buttons */
-    .position-absolute .rounded-circle {
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.9);
-      transition: all 0.3s ease;
-      border: none;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .position-absolute .rounded-circle:hover {
-      background-color: var(--primary-color);
-      color: white !important;
-    }
-
-    /* Star Ratings */
-    .text-warning {
-      color: #ffc107 !important;
-    }
-
-    /* Buttons */
-    .btn-danger {
-      background-color: var(--accent-color);
-      border-color: var(--accent-color);
-      padding: 0.5rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .btn-danger:hover {
-      background-color: #e66a1a;
-      border-color: #e66a1a;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(255, 123, 37, 0.3);
-    }
-
-    /* Category Icons */
-    .border.rounded {
-      border-color: #e9ecef !important;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .border.rounded:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(106, 76, 147, 0.1);
-      border-color: var(--primary-color) !important;
-    }
-
-    .border.rounded i {
-      transition: all 0.3s ease;
-    }
-
-    .border.rounded:hover i {
-      color: var(--primary-color);
-    }
-
-    /* New Arrivals Section */
-    .new-product-section {
-      background-color: var(--light-color);
-      border-radius: 10px;
-      padding: 2rem 0;
-    }
-
-    .new-feature {
-      object-fit: cover;
-      border-radius: 10px;
-      transition: all 0.5s ease;
-      height: 100%;
-      width: 100%;
-    }
-
-    .new-feature:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .new-product-div {
-      height: 600px;
-    }
-
-    .new-feature-div {
-      height: 50%;
-    }
-
-    /* Features Section */
-    .feature-box {
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      border-radius: 10px;
-      text-align: center;
-      height: 100%;
-    }
-
-    .feature-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(106, 76, 147, 0.1);
-      border-color: var(--primary-color) !important;
-    }
-
-    .feature-box i {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: var(--accent-color);
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--dark-color) !important;
-      padding: 3rem 0;
-    }
-
-    footer h6 {
-      font-weight: 600;
-      margin-bottom: 1rem;
-      color: white;
-    }
-
-    footer ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    footer a {
-      transition: all 0.3s ease;
-      color: rgba(255, 255, 255, 0.7);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: var(--accent-color) !important;
-      padding-left: 5px;
-    }
-
-    .social-icons a {
-      width: 40px;
-      height: 40px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      transition: all 0.3s ease;
-      color: white;
-      margin-right: 0.5rem;
-    }
-
-    .social-icons a:hover {
-      background-color: var(--accent-color);
-      transform: translateY(-3px);
-      color: white;
-    }
-
-    /* Product Management Specific Styles */
-    .upload-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      z-index: 1000;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: var(--primary-color);
-      border: none;
-      box-shadow: 0 4px 12px rgba(108, 99, 255, 0.3);
-      transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.5rem;
-    }
-
-    .upload-btn:hover {
-      transform: scale(1.1);
-      background-color: var(--accent-color);
-      box-shadow: 0 6px 16px rgba(255, 123, 37, 0.4);
-    }
-
-    .modal-header {
-      background-color: var(--primary-color);
-      color: white;
-    }
-
-    .form-section {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #eee;
-    }
-
-    .form-section-title {
-      font-weight: 600;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .nav-tabs .nav-link {
-      color: #495057;
-      font-weight: 500;
-      border: none;
-      padding: 0.75rem 1.25rem;
-    }
-
-    .nav-tabs .nav-link.active {
-      color: var(--primary-color);
-      font-weight: 600;
-      border-bottom: 2px solid var(--primary-color);
-    }
-
-    .tab-content {
-      padding: 1.5rem 0;
-    }
-
-    .image-preview-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .image-preview {
-      width: 80px;
-      height: 80px;
-      border-radius: 8px;
-      object-fit: cover;
-      border: 1px solid #e0e0e0;
-    }
-
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .first-img {
-        height: 200px;
-      }
-      
-      .second-img-div {
-        height: 350px;
-      }
-      
-      .new-product-div {
-        height: auto;
-      }
-      
-      .new-feature-div {
-        height: 250px;
-        margin-bottom: 1rem;
-      }
-      
-      .navbar-brand {
-        font-size: 1.25rem;
-      }
-
-      .card-img-top {
-        height: 150px;
-      }
-    }
-
-    /* Animation for buttons */
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    .btn-danger:active, .upload-btn:active {
-      animation: pulse 0.3s ease;
-    }
-
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #f1f1f1;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--primary-color);
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #5a3d7a;
-    }
-
-    /* Active nav item */
-    .nav-item .active {
-      color: var(--primary-color) !important;
-      font-weight: 600;
-    }
-  </style>
 </head>
 
-<body>
-  <!-- Header -->
-  <header class="bg-dark text-white fixed-top py-2">
-    <div class="container d-flex justify-content-between align-items-center">
-      <div class="text-center flex-grow-1">
-        <span>Summer Sale For All Fabrics And Free Express Delivery - OFF 50%! </span>
-        <a href="#" class="text-warning text-decoration-underline fw-bold">Shop Now</a>
-      </div>
-      <div class="d-flex align-items-center">
-        <label for="languageSelect" class="visually-hidden">Select Language</label>
-        <select id="languageSelect" name="language" class="bg-dark border-0 text-white p-0">
-          <option value="en" selected>EN</option>
-          <option value="es">ES</option>
-          <option value="fr">FR</option>
-          <option value="de">DE</option>
-          <option value="hi">HI</option>
-          <option value="zh">ZH</option>
-          <option value="ja">JA</option>
-          <option value="ar">AR</option>
-        </select>
+<body class="bg-fabric-pattern">
+  <!-- Top Announcement Bar -->
+  <div class="gradient-bg text-white py-2 shadow-sm">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-10 text-center text-md-start">
+          <span class="d-inline-block me-2"><i class="bi bi-megaphone me-2"></i>Summer Sale For All Fabrics And Free
+            Express Delivery - OFF 50%!</span>
+          <a href="#" class="text-white text-decoration-underline fw-bold">Shop Now</a>
+        </div>
+        <div class="col-md-2 text-end d-none d-md-block">
+          <select id="languageSelect" class="form-select form-select-sm bg-danger text-white border-white">
+            <option value="en" selected>English</option>
+            <option value="hi">Hindi</option>
+            <option value="ta">Tamil</option>
+            <option value="pa">Punjabi</option>
+            <option value="mr">Marathi</option>
+            <option value="kn">Kannada</option>
+            <option value="te">Telugu</option>
+
+          </select>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mt-5 shadow-sm">
+  <!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">FabricExclusive</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand fw-bold fs-3" href="#" style="color: #dc3545;">
+        <i class="bi bi-scissors me-2"></i>FabricExclusive
+      </a>
+
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarContent">
-        <!-- Center nav links -->
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#home">Home</a>
+          <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-grid me-1"></i> Shop
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li>
+                <h6 class="dropdown-header">Fabric Types</h6>
+              </li>
+              <li><a class="dropdown-item" href="#">Cotton Fabrics</a></li>
+              <li><a class="dropdown-item" href="#">Silk Fabrics</a></li>
+              <li><a class="dropdown-item" href="#">Wool Fabrics</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <h6 class="dropdown-header">Collections</h6>
+              </li>
+              <li><a class="dropdown-item" href="#">Summer Collection</a></li>
+              <li><a class="dropdown-item" href="#">Luxury Collection</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#products">Products</a>
+          <li class="nav-item mx-2">
+            <a class="nav-link fw-semibold" href="#"><i class="bi bi-info-circle me-1"></i> About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#collections">Collections</a>
+          <li class="nav-item mx-2">
+            <a class="nav-link fw-semibold" href="#"><i class="bi bi-envelope me-1"></i> Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item d-lg-none">
-            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#uploadModal">Add Product</a>
+          <li class="nav-item mx-2">
+            <a class="nav-link fw-semibold" href="#"><i class="bi bi-journal-text me-1"></i> Blog</a>
           </li>
         </ul>
 
-        <!-- Search bar -->
-        <form class="d-flex me-3">
-          <input class="form-control" type="search" placeholder="Search fabrics..." aria-label="Search">
-          <button class="btn btn-outline-secondary ms-2" type="submit" title="Search">
-            <i class="bi bi-search"></i>
-          </button>
-        </form>
+        <div class="d-flex align-items-center">
+          <div class="input-group d-none d-lg-flex me-3" style="width: 250px;">
+            <input type="search" class="form-control border-end-0" placeholder="Search fabrics...">
+            <button class="btn btn-outline-danger border-start-0" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
 
-        <!-- Icons -->
-        <div class="d-flex">
-          <a href="#" class="me-3 text-dark fs-5 position-relative" title="Wishlist">
-            <i class="bi bi-heart"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              3
-            </span>
-          </a>
-          <a href="#" class="text-dark fs-5 position-relative" title="Cart">
-            <i class="bi bi-cart"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              5
-            </span>
-          </a>
+          <div class="ms-2 d-flex">
+            <a href="#" class="btn btn-outline-danger position-relative rounded-circle me-2" data-bs-toggle="tooltip"
+              data-bs-placement="bottom" title="Wishlist">
+              <i class="bi bi-heart"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            </a>
+            <a href="#" class="btn btn-outline-danger position-relative rounded-circle me-2" data-bs-toggle="tooltip"
+              data-bs-placement="bottom" title="Cart">
+              <i class="bi bi-cart"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5</span>
+            </a>
+            <a href="vendor-screen.html" class="btn btn-outline-danger rounded-circle" data-bs-toggle="tooltip"
+              data-bs-placement="bottom" title="Account">
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="py-3 mt-5">
-    <!-- Hero Section -->
-    <section id="home" class="py-5">
-      <div class="container my-5">
-        <div class="row align-items-center">
-          <!-- Left side: Categories -->
-          <div class="col-lg-3 mb-4 mb-lg-0">
-            <div class="card shadow-sm">
-              <div class="card-header bg-primary text-white">
-                <h5 class="mb-0">Fabric Categories</h5>
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled">
-                  <li class="mb-2 d-flex justify-content-between align-items-center">
-                    <a href="/exclusive/cotton-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Cotton Fabrics</a>
-                    <i class="bi bi-chevron-right text-muted"></i>
-                  </li>
-                  <li class="mb-2 d-flex justify-content-between align-items-center">
-                    <a href="/exclusive/silk-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Silk Fabrics</a>
-                    <i class="bi bi-chevron-right text-muted"></i>
-                  </li>
-                  <li class="mb-2 d-flex justify-content-between align-items-center">
-                    <a href="/exclusive/wool-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Wool Fabrics</a>
-                    <i class="bi bi-chevron-right text-muted"></i>
-                  </li>
-                  <li class="mb-2 d-flex justify-content-between align-items-center">
-                    <a href="/exclusive/linen-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Linen Fabrics</a>
-                    <i class="bi bi-chevron-right text-muted"></i>
-                  </li>
-                  <li class="mb-2 d-flex justify-content-between align-items-center">
-                    <a href="/exclusive/synthetic-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Synthetic Fabrics</a>
-                    <i class="bi bi-chevron-right text-muted"></i>
-                  </li>
-                  <li class="mb-2 d-flex justify-content-between align-items-center">
-                    <a href="/exclusive/denim-fabrics.html" class="text-decoration-none text-dark flex-grow-1">Denim Fabrics</a>
-                    <i class="bi bi-chevron-right text-muted"></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <!-- Mobile Offcanvas Menu -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header border-bottom">
+      <h5 class="offcanvas-title fw-bold" style="color: #dc3545;">
+        <i class="bi bi-scissors me-2"></i>FabricExclusive
+      </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#"><i class="bi bi-house-door me-2"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#"><i class="bi bi-grid me-2"></i> Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#"><i class="bi bi-info-circle me-2"></i> About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#"><i class="bi bi-envelope me-2"></i> Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="#"><i class="bi bi-journal-text me-2"></i> Blog</a>
+        </li>
+      </ul>
 
-          <!-- Right side: Hero Image -->
-          <div class="col-lg-9">
-            <div class="first-img-div position-relative rounded overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=1200&q=80"
-                alt="Fabric Collection" class="first-img img-fluid w-100">
-              <div class="position-absolute bottom-0 start-0 p-4 text-white" style="background: rgba(0,0,0,0.5); width: 100%;">
-                <h2 class="fw-bold">Premium Quality Fabrics</h2>
-                <p class="mb-3">Discover our exclusive collection of fabrics for all your needs</p>
-                <a href="#products" class="btn btn-danger">Shop Now</a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <hr>
+
+      <div class="input-group mb-3">
+        <input type="search" class="form-control" placeholder="Search fabrics...">
+        <button class="btn btn-danger" type="button">
+          <i class="bi bi-search"></i>
+        </button>
       </div>
-    </section>
 
-    <!-- Flash Sales Section -->
-    <section id="products" class="py-5 bg-light">
-      <div class="container">
-        <!-- Header row -->
-        <div class="row align-items-center bg-white p-3 rounded mb-4 shadow-sm">
-          <!-- Left: Flash sales text -->
-          <div class="col-auto">
-            <h5 class="text-danger fw-bold mb-1">Today's</h5>
-            <h2 class="fw-bold m-0">Fabric Flash Sales</h2>
-          </div>
-
-          <!-- Center: Countdown -->
-          <div class="col text-center">
-            <div class="d-flex justify-content-center gap-3 mb-1">
-              <span class="fw-semibold">Days</span>
-              <span class="fw-semibold">Hours</span>
-              <span class="fw-semibold">Minutes</span>
-              <span class="fw-semibold">Seconds</span>
-            </div>
-            <div class="d-flex justify-content-center gap-3">
-              <div class="bg-dark text-white rounded px-2 py-1 fw-bold">03</div>
-              <div class="bg-dark text-white rounded px-2 py-1 fw-bold">23</div>
-              <div class="bg-dark text-white rounded px-2 py-1 fw-bold">19</div>
-              <div class="bg-dark text-white rounded px-2 py-1 fw-bold">56</div>
-            </div>
-          </div>
-
-          <!-- Right: Arrows with circular bg -->
-          <div class="col-auto d-flex gap-2">
-            <a href="#" class="text-dark bg-white rounded-circle p-2 shadow-sm" title="Previous"><i
-                class="bi bi-arrow-left"></i></a>
-            <a href="#" class="text-dark bg-white rounded-circle p-2 shadow-sm" title="Next"><i class="bi bi-arrow-right"></i></a>
-          </div>
-        </div>
-
-        <!-- Products grid -->
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-40%</div>
-                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Cotton Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
-                </div>
-              </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Premium Cotton Fabric</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$12/meter</span>
-                  <span class="text-muted text-decoration-line-through">$20/meter</span>
-                </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(88)</span>
-                </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-35%</div>
-                <img src="https://images.unsplash.com/photo-1566140967404-b8b3932483f5?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Silk Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
-                </div>
-              </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Pure Silk Fabric</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$25/meter</span>
-                  <span class="text-muted text-decoration-line-through">$33/meter</span>
-                </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(75)</span>
-                </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-30%</div>
-                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Wool Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
-                </div>
-              </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Wool Blend Fabric</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$18/meter</span>
-                  <span class="text-muted text-decoration-line-through">$25/meter</span>
-                </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(99)</span>
-                </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <div class="position-absolute top-0 start-0 bg-danger text-white px-2 py-1 rounded-end">-25%</div>
-                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Linen Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
-                </div>
-              </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Pure Linen Fabric</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$15/meter</span>
-                  <span class="text-muted text-decoration-line-through">$20/meter</span>
-                </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(99)</span>
-                </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Button row -->
-        <div class="row mt-4">
-          <div class="col text-center">
-            <a href="#" class="btn btn-danger px-4 py-2">View All Fabrics</a>
-          </div>
-        </div>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="btn btn-outline-danger position-relative">
+          <i class="bi bi-heart"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+        </a>
+        <a href="#" class="btn btn-outline-danger position-relative">
+          <i class="bi bi-cart"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5</span>
+        </a>
+        <a href="#" class="btn btn-outline-danger">
+          <i class="bi bi-person"></i>
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
 
-    <!-- Categories Section -->
-    <section id="collections" class="py-5">
-      <div class="container">
-        <!-- Title Row -->
-        <div class="d-flex justify-content-between align-items-center mb-4">
-          <div>
-            <h5 class="text-danger fw-bold mb-1">Categories</h5>
-            <h2 class="fw-bold mb-0">Browse Fabric Categories</h2>
-          </div>
-        
-        </div>
+  <!-- Hero Section -->
+  <section class="py-5 mb-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Categories Sidebar -->
+        <div class="col-lg-3 d-none d-lg-block">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-header bg-danger text-white">
+              <h5 class="mb-0"><i class="bi bi-list-ul me-2"></i> Fabric Categories</h5>
+            </div>
+            <div class="card-body p-0">
+              <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/cotton-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Cotton Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">24</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/silk-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Silk Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">18</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/wool-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Wool Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">12</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/linen-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Linen Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">15</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/synthetic-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Synthetic Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">32</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/denim-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Denim Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">8</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/knit-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Knit Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">14</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center" href="/exclusive/printed-fabrics.html">
+                    <span><i class="bi bi-dot me-1"></i> Printed Fabrics</span>
+                    <span class="badge bg-danger rounded-pill">12</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex justify-content-between align-items-center flex-nowrap"
+                    style="min-width: 0;" href="/exclusive/embroidered-fabrics.html">
+                    <span class="text-truncate"><i class="bi bi-dot me-1"></i> Embroidered Fabrics</span>
+                    <span class="badge bg-danger rounded-pill ms-2 flex-shrink-0">21</span>
+                  </a>
+                </li>
 
-        <!-- Categories grid -->
-        <div class="row g-3 justify-content-center">
-          <!-- Cotton -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-            <a href="#" class="text-decoration-none">
-              <div class="border rounded py-4 h-100">
-                <i class="fas fa-tshirt fs-1 text-danger"></i>
-                <p class="mt-2 fw-semibold mb-0 text-dark">Cotton</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Silk -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-            <a href="#" class="text-decoration-none">
-              <div class="border rounded py-4 h-100">
-                <i class="fas fa-vest fs-1 text-danger"></i>
-                <p class="mt-2 fw-semibold mb-0 text-dark">Silk</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Wool -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-            <a href="#" class="text-decoration-none">
-              <div class="border rounded py-4 h-100">
-                <i class="fas fa-vest fs-1 text-danger"></i>
-                <p class="mt-2 fw-semibold mb-0 text-dark">Wool</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Linen -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-            <a href="#" class="text-decoration-none">
-              <div class="border rounded py-4 h-100">
-                <i class="fas fa-rug fs-1 text-danger"></i>
-                <p class="mt-2 fw-semibold mb-0 text-dark">Linen</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Synthetic -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-            <a href="#" class="text-decoration-none">
-              <div class="border rounded py-4 h-100">
-                <i class="fas fa-socks fs-1 text-danger"></i>
-                <p class="mt-2 fw-semibold mb-0 text-dark">Synthetic</p>
-              </div>
-            </a>
-          </div>
-
-          <!-- Denim -->
-          <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-            <a href="#" class="text-decoration-none">
-              <div class="border rounded py-4 h-100">
-                <i class="fas fa-vest fs-1 text-danger"></i>
-                <p class="mt-2 fw-semibold mb-0 text-dark">Denim</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Banner Section -->
-    <section class="py-5">
-      <div class="container">
-        <div class="second-img-div rounded overflow-hidden position-relative">
-          <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=1200&q=80"
-            alt="Fabric Collection" class="second-img img-fluid w-100">
-          <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(106, 76, 147, 0.7);">
-            <div class="container text-white">
-              <h2 class="fw-bold display-5">Summer Collection 2023</h2>
-              <p class="lead mb-4">Discover our new range of lightweight fabrics perfect for summer</p>
-              <a href="#" class="btn btn-light text-primary">Explore Now</a>
+              </ul>
+            </div>
+            <div class="card-footer bg-light">
+              <a href="#" class="btn btn-sm btn-danger w-100">
+                <i class="bi bi-grid me-1"></i> View All Categories
+              </a>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Best Selling Section -->
-    <section class="py-5 bg-light">
-      <div class="container">
-        <!-- Header row -->
-        <div class="row align-items-center bg-white p-3 rounded mb-4 shadow-sm">
-          <!-- Left: Heading text -->
-          <div class="col">
-            <h5 class="text-danger fw-bold mb-1">This Month</h5>
-            <h2 class="fw-bold m-0">Best Selling Fabrics</h2>
-          </div>
-
-          <!-- Right: Button -->
-          <div class="col-auto text-end">
-            <a href="#" class="btn btn-danger px-4 py-2">View All Fabrics</a>
-          </div>
-        </div>
-
-        <!-- Products grid -->
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Cotton Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
+        <!-- Hero Carousel -->
+        <div class="col-lg-9">
+          <div id="heroCarousel" class="carousel slide carousel-fade shadow-lg rounded-3 overflow-hidden"
+            data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner rounded-3 overflow-hidden">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=1200&q=80"
+                  class="d-block w-100" alt="Premium Fabrics Collection" style="height: 400px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block text-start mb-5 pb-5">
+                  <h2 class="display-5 fw-bold text-stroke">Summer Collection 2024</h2>
+                  <p class="lead text-stroke">Discover our exclusive range of lightweight summer fabrics</p>
+                  <a href="#" class="btn btn-danger btn-lg mt-2 px-4">Shop Now</a>
                 </div>
               </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Organic Cotton</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$14/meter</span>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=1200&q=80"
+                  class="d-block w-100" alt="Luxury Silk Fabrics" style="height: 400px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block text-end mb-5 pb-5">
+                  <h2 class="display-5 fw-bold text-stroke">Luxury Silk Collection</h2>
+                  <p class="lead text-stroke">Premium quality silk fabrics at discounted prices</p>
+                  <a href="#" class="btn btn-danger btn-lg mt-2 px-4">Explore</a>
                 </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(88)</span>
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=1200&q=80"
+                  class="d-block w-100" alt="Organic Cotton" style="height: 400px; object-fit: cover;">
+                <div class="carousel-caption d-none d-md-block mb-5 pb-5">
+                  <h2 class="display-5 fw-bold text-stroke">Organic Cotton</h2>
+                  <p class="lead text-stroke">Eco-friendly fabrics for sustainable fashion</p>
+                  <a href="#" class="btn btn-danger btn-lg mt-2 px-4">Discover</a>
                 </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
               </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon bg-danger rounded-circle p-3" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon bg-danger rounded-circle p-3" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
 
-          <!-- Card 2 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1566140967404-b8b3932483f5?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Silk Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
-                </div>
-              </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Mulberry Silk</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$28/meter</span>
-                </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(75)</span>
-                </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Wool Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
-                </div>
-              </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Merino Wool</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$22/meter</span>
-                </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(99)</span>
-                </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100">
-              <div class="position-relative">
-                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
-                  class="card-img-top" alt="Linen Fabric">
-                <div class="position-absolute top-0 end-0 m-2 d-flex flex-column align-items-center">
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 mb-1 shadow-sm" title="Add to wishlist"><i
-                      class="bi bi-heart"></i></a>
-                  <a href="#" class="text-dark bg-white rounded-circle p-1 shadow-sm" title="View product"><i
-                      class="bi bi-eye"></i></a>
-                </div>
-              </div>
-              <div class="card-body">
-                <h6 class="fw-bold mb-1">Flax Linen</h6>
-                <div class="d-flex align-items-center mb-1">
-                  <span class="text-danger fw-bold me-2">$18/meter</span>
-                </div>
-                <div class="text-warning mb-2">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star"></i>
-                  <span class="text-muted small ms-1">(99)</span>
-                </div>
-                <button class="btn btn-outline-primary w-100">Add to Cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- New Arrivals Section -->
-    <section class="new-product-section py-5">
-      <div class="container">
-        <div class="row align-items-center bg-white p-3 rounded mb-4 shadow-sm">
-          <!-- Left: Heading text -->
-          <div class="col">
-            <h5 class="text-danger fw-bold mb-1">Featured</h5>
-            <h2 class="fw-bold m-0">New Fabric Arrivals</h2>
-          </div>
-        </div>
-
-        <!-- Images row -->
-        <div class="row g-4">
-          <!-- Left big image -->
-          <div class="col-md-6">
-            <div class="new-feature-div position-relative rounded overflow-hidden h-100">
-              <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=600&q=80"
-                class="new-feature" alt="New Cotton Collection">
-              <div class="position-absolute bottom-0 start-0 p-4 text-white" style="background: rgba(0,0,0,0.5); width: 100%;">
-                <h3 class="fw-bold">Cotton Collection</h3>
-                <p>Breathable and comfortable fabrics for summer</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right stacked images -->
-          <div class="col-md-6">
-            <!-- Top row -->
-            <div class="new-feature-div position-relative rounded overflow-hidden mb-3" style="height: 48%;">
-              <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
-                class="new-feature" alt="Silk Collection">
-              <div class="position-absolute bottom-0 start-0 p-3 text-white" style="background: rgba(0,0,0,0.5); width: 100%;">
-                <h4 class="fw-bold">Silk Collection</h4>
-              </div>
-            </div>
-
-            <!-- Bottom row: two columns -->
-            <div class="row g-3" style="height: 48%;">
-              <div class="col-md-6">
-                <div class="new-feature-div position-relative rounded overflow-hidden h-100">
-                  <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
-                    class="new-feature" alt="Wool Collection">
-                  <div class="position-absolute bottom-0 start-0 p-2 text-white" style="background: rgba(0,0,0,0.5); width: 100%;">
-                    <h5 class="fw-bold">Wool Collection</h5>
+          <!-- Promo Banners Below Carousel -->
+          <div class="row mt-3 g-3">
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm hover-scale h-100">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                  class="card-img" alt="New Arrivals" style="height: 120px; object-fit: cover;">
+                <div class="card-img-overlay d-flex align-items-center p-3">
+                  <div>
+                    <h5 class="card-title text-white mb-1">New Arrivals</h5>
+                    <a href="#" class="btn btn-sm btn-light">Shop Now</a>
                   </div>
                 </div>
               </div>
-              <div class="col-md-6">
-                <div class="new-feature-div position-relative rounded overflow-hidden h-100">
-                  <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
-                    class="new-feature" alt="Linen Collection">
-                  <div class="position-absolute bottom-0 start-0 p-2 text-white" style="background: rgba(0,0,0,0.5); width: 100%;">
-                    <h5 class="fw-bold">Linen Collection</h5>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm hover-scale h-100">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                  class="card-img" alt="Best Sellers" style="height: 120px; object-fit: cover;">
+                <div class="card-img-overlay d-flex align-items-center p-3">
+                  <div>
+                    <h5 class="card-title text-white mb-1">Best Sellers</h5>
+                    <a href="#" class="btn btn-sm btn-light">View All</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card border-0 shadow-sm hover-scale h-100">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                  class="card-img" alt="Clearance Sale" style="height: 120px; object-fit: cover;">
+                <div class="card-img-overlay d-flex align-items-center p-3">
+                  <div>
+                    <h5 class="card-title text-white mb-1">Clearance Sale</h5>
+                    <a href="#" class="btn btn-sm btn-light">Up to 70% Off</a>
                   </div>
                 </div>
               </div>
@@ -1109,116 +337,931 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Features Section -->
-    <section class="py-5">
-      <div class="container">
-        <div class="row g-4 justify-content-center">
-          <!-- Free Delivery -->
-          <div class="col-12 col-md-4">
-            <div class="feature-box border rounded p-4 text-center h-100">
-              <i class="bi bi-truck fs-1"></i>
-              <h5 class="fw-bold mt-3">FREE FABRIC SAMPLES</h5>
-              <p class="text-muted mb-0">Free fabric samples for all orders over $100</p>
+  <!-- Flash Sales Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+          <span class="badge bg-danger mb-2">Limited Time</span>
+          <h2 class="fw-bold mb-0">Fabric Flash Sales</h2>
+        </div>
+        <div class="col-md-6">
+          <div class="d-flex align-items-center justify-content-md-end">
+            <div class="countdown-box bg-danger bg-opacity-10 rounded p-2 text-center mx-1">
+              <div class="fs-3 fw-bold text-danger">03</div>
+              <small class="text-muted">Days</small>
             </div>
-          </div>
-
-          <!-- Customer Service -->
-          <div class="col-12 col-md-4">
-            <div class="feature-box border rounded p-4 text-center h-100">
-              <i class="bi bi-headset fs-1"></i>
-              <h5 class="fw-bold mt-3">FABRIC EXPERTS</h5>
-              <p class="text-muted mb-0">Our fabric specialists are here to help</p>
+            <div class="countdown-box bg-danger bg-opacity-10 rounded p-2 text-center mx-1">
+              <div class="fs-3 fw-bold text-danger">23</div>
+              <small class="text-muted">Hours</small>
             </div>
-          </div>
-
-          <!-- Money Back -->
-          <div class="col-12 col-md-4">
-            <div class="feature-box border rounded p-4 text-center h-100">
-              <i class="bi bi-arrow-repeat fs-1"></i>
-              <h5 class="fw-bold mt-3">QUALITY GUARANTEE</h5>
-              <p class="text-muted mb-0">We stand behind our fabric quality</p>
+            <div class="countdown-box bg-danger bg-opacity-10 rounded p-2 text-center mx-1">
+              <div class="fs-3 fw-bold text-danger">19</div>
+              <small class="text-muted">Minutes</small>
+            </div>
+            <div class="countdown-box bg-danger bg-opacity-10 rounded p-2 text-center mx-1">
+              <div class="fs-3 fw-bold text-danger">56</div>
+              <small class="text-muted">Seconds</small>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+
+      <div class="row g-4">
+        <!-- Product Card 1 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 start-0 m-2">
+              <span class="badge bg-danger">-40%</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Premium Cotton Fabric" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Premium Cotton</h6>
+              <div class="d-flex justify-content-center align-items-center mb-2">
+                <span class="text-danger fw-bold me-2">$12/meter</span>
+                <span class="text-decoration-line-through text-muted small">$20/meter</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(88)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 start-0 m-2">
+              <span class="badge bg-danger">-35%</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Pure Silk Fabric" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Pure Silk</h6>
+              <div class="d-flex justify-content-center align-items-center mb-2">
+                <span class="text-danger fw-bold me-2">$25/meter</span>
+                <span class="text-decoration-line-through text-muted small">$38/meter</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(75)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 start-0 m-2">
+              <span class="badge bg-danger">-30%</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Wool Blend Fabric" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Wool Blend</h6>
+              <div class="d-flex justify-content-center align-items-center mb-2">
+                <span class="text-danger fw-bold me-2">$18/meter</span>
+                <span class="text-decoration-line-through text-muted small">$26/meter</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 start-0 m-2">
+              <span class="badge bg-danger">-25%</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Pure Linen Fabric" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Pure Linen</h6>
+              <div class="d-flex justify-content-center align-items-center mb-2">
+                <span class="text-danger fw-bold me-2">$15/meter</span>
+                <span class="text-decoration-line-through text-muted small">$20/meter</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 start-0 m-2">
+              <span class="badge bg-danger">-25%</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top" alt="Premium Denim" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Premium Denim</h6>
+              <div class="d-flex justify-content-center align-items-center mb-2">
+                <span class="text-danger fw-bold me-2">$20/meter</span>
+                <span class="text-decoration-line-through text-muted small">$27/meter</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 start-0 m-2">
+              <span class="badge bg-danger">-25%</span>
+            </div>
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Embroidered Silk" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Embroidered Silk</h6>
+              <div class="d-flex justify-content-center align-items-center mb-2">
+                <span class="text-danger fw-bold me-2">$35/meter</span>
+                <span class="text-decoration-line-through text-muted small">$47/meter</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-danger btn-lg px-4 py-2">
+          <i class="bi bi-arrow-right me-2"></i>View All Flash Sales
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fabric Categories Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+          <span class="badge bg-danger mb-2">Collections</span>
+          <h2 class="fw-bold mb-0">Browse Fabric Categories</h2>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="btn-group">
+            <button class="btn btn-outline-danger">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+            <button class="btn btn-outline-danger">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <!-- Cotton -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="card border-0 shadow-sm h-100 text-center p-4 hover-scale">
+            <div class="bg-danger bg-opacity-10 rounded-circle p-3 mx-auto mb-3">
+              <i class="fas fa-tshirt fs-1 text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-0">Cotton</h5>
+            <p class="text-muted small mb-0">24 products</p>
+          </div>
+        </div>
+
+        <!-- Silk -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="card border-0 shadow-sm h-100 text-center p-4 hover-scale">
+            <div class="bg-danger bg-opacity-10 rounded-circle p-3 mx-auto mb-3">
+              <i class="fas fa-vest fs-1 text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-0">Silk</h5>
+            <p class="text-muted small mb-0">18 products</p>
+          </div>
+        </div>
+
+        <!-- Wool -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="card border-0 shadow-sm h-100 text-center p-4 hover-scale">
+            <div class="bg-danger bg-opacity-10 rounded-circle p-3 mx-auto mb-3">
+              <i class="fas fa-vest fs-1 text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-0">Wool</h5>
+            <p class="text-muted small mb-0">12 products</p>
+          </div>
+        </div>
+
+        <!-- Linen -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="card border-0 shadow-sm h-100 text-center p-4 hover-scale">
+            <div class="bg-danger bg-opacity-10 rounded-circle p-3 mx-auto mb-3">
+              <i class="fas fa-rug fs-1 text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-0">Linen</h5>
+            <p class="text-muted small mb-0">15 products</p>
+          </div>
+        </div>
+
+        <!-- Synthetic -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="card border-0 shadow-sm h-100 text-center p-4 hover-scale">
+            <div class="bg-danger bg-opacity-10 rounded-circle p-3 mx-auto mb-3">
+              <i class="fas fa-socks fs-1 text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-0">Synthetic</h5>
+            <p class="text-muted small mb-0">32 products</p>
+          </div>
+        </div>
+
+        <!-- Denim -->
+        <div class="col-6 col-sm-4 col-md-2">
+          <div class="card border-0 shadow-sm h-100 text-center p-4 hover-scale">
+            <div class="bg-danger bg-opacity-10 rounded-circle p-3 mx-auto mb-3">
+              <i class="fas fa-vest fs-1 text-danger"></i>
+            </div>
+            <h5 class="fw-bold mb-0">Denim</h5>
+            <p class="text-muted small mb-0">8 products</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Selling Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row mb-4 align-items-center">
+        <div class="col-md-6">
+          <span class="badge bg-danger mb-2">Trending</span>
+          <h2 class="fw-bold mb-0">Best Selling Fabrics</h2>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="btn btn-outline-danger">
+            View All <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Product Card 1 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top" alt="Organic Cotton" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Organic Cotton</h6>
+              <div class="text-danger fw-bold mb-2">$14/meter</div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(88)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Mulberry Silk" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Mulberry Silk</h6>
+              <div class="text-danger fw-bold mb-2">$28/meter</div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(75)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top" alt="Merino Wool" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Merino Wool</h6>
+              <div class="text-danger fw-bold mb-2">$22/meter</div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Flax Linen" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Flax Linen</h6>
+              <div class="text-danger fw-bold mb-2">$18/meter</div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top" alt="Stretch Denim" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Stretch Denim</h6>
+              <div class="text-danger fw-bold mb-2">$24/meter</div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="card h-100 border-0 shadow-sm hover-scale">
+            <div class="position-absolute top-0 end-0 m-2">
+              <button class="btn btn-sm btn-light rounded-circle">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&q=80"
+              class="card-img-top" alt="Embroidered Silk" style="height: 180px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h6 class="card-title fw-bold">Embroidered Silk</h6>
+              <div class="text-danger fw-bold mb-2">$38/meter</div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted small ms-1">(99)</span>
+              </div>
+              <button class="btn btn-sm btn-outline-danger w-100">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Premium Collections Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <span class="badge bg-danger mb-2">Exclusive</span>
+          <h2 class="fw-bold mb-3">Our Premium Fabric Collections</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 600px;">
+            Discover our handpicked selection of premium fabrics from around the world
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Collection 1 -->
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden hover-scale">
+            <div class="row g-0 h-100">
+              <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=600&q=80"
+                  class="img-fluid h-100 w-100 object-fit-cover" alt="Luxury Collection">
+              </div>
+              <div class="col-md-6 bg-white">
+                <div class="card-body d-flex flex-column h-100">
+                  <span class="badge bg-danger mb-2">New</span>
+                  <h3 class="card-title fw-bold">Luxury Collection</h3>
+                  <p class="card-text text-muted mb-4">
+                    Premium fabrics for the most discerning customers. Experience unparalleled quality and comfort.
+                  </p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-outline-danger">Explore Collection</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Collection 2 -->
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden hover-scale">
+            <div class="row g-0 h-100">
+              <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
+                  class="img-fluid h-100 w-100 object-fit-cover" alt="Summer Collection">
+              </div>
+              <div class="col-md-6 bg-white">
+                <div class="card-body d-flex flex-column h-100">
+                  <span class="badge bg-danger mb-2">Popular</span>
+                  <h3 class="card-title fw-bold">Summer Collection</h3>
+                  <p class="card-text text-muted mb-4">
+                    Lightweight and breathable fabrics perfect for warm weather. Stay cool and stylish all summer long.
+                  </p>
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-outline-danger">Explore Collection</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <span class="badge bg-danger mb-2">New</span>
+          <h2 class="fw-bold mb-3">New Fabric Arrivals</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 600px;">
+            Fresh from the loom - discover our newest fabric additions
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Main Image -->
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100 overflow-hidden hover-scale">
+            <img src="https://images.unsplash.com/photo-1533460004989-cef01064af7e?auto=format&fit=crop&w=600&q=80"
+              class="card-img-top h-100 object-fit-cover" alt="New Cotton Collection" style="height: 400px;">
+            <div class="card-img-overlay d-flex align-items-end bg-dark bg-opacity-25">
+              <div class="text-white">
+                <h3 class="card-title fw-bold">Organic Cotton Collection</h3>
+                <a href="#" class="btn btn-danger">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Images -->
+        <div class="col-md-6">
+          <div class="row g-3 h-100">
+            <div class="col-12">
+              <div class="card border-0 shadow-sm h-100 overflow-hidden hover-scale">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=600&q=80"
+                  class="card-img-top h-100 object-fit-cover" alt="Silk Collection" style="height: 190px;">
+                <div class="card-img-overlay d-flex align-items-end bg-dark bg-opacity-25">
+                  <div class="text-white">
+                    <h4 class="card-title fw-bold">Silk Collection</h4>
+                    <a href="#" class="btn btn-sm btn-danger">Explore</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card border-0 shadow-sm h-100 overflow-hidden hover-scale">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                  class="card-img-top h-100 object-fit-cover" alt="Wool Collection" style="height: 190px;">
+                <div class="card-img-overlay d-flex align-items-end bg-dark bg-opacity-25">
+                  <div class="text-white">
+                    <h5 class="card-title fw-bold">Wool</h5>
+                    <a href="#" class="btn btn-sm btn-outline-light">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card border-0 shadow-sm h-100 overflow-hidden hover-scale">
+                <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=600&q=80"
+                  class="card-img-top h-100 object-fit-cover" alt="Linen Collection" style="height: 190px;">
+                <div class="card-img-overlay d-flex align-items-end bg-dark bg-opacity-25">
+                  <div class="text-white">
+                    <h5 class="card-title fw-bold">Linen</h5>
+                    <a href="#" class="btn btn-sm btn-outline-light">View</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <!-- Free Samples -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 hover-scale">
+            <div class="card-body text-center p-4">
+              <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                <i class="bi bi-box-seam fs-1 text-danger"></i>
+              </div>
+              <h4 class="fw-bold">Free Fabric Samples</h4>
+              <p class="text-muted">
+                Request free samples of our fabrics to feel the quality before you buy
+              </p>
+              <a href="#" class="btn btn-link text-danger text-decoration-none">
+                Learn More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fabric Experts -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 hover-scale">
+            <div class="card-body text-center p-4">
+              <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                <i class="bi bi-headset fs-1 text-danger"></i>
+              </div>
+              <h4 class="fw-bold">Fabric Experts</h4>
+              <p class="text-muted">
+                Our specialists are available to help you choose the perfect fabric for your project
+              </p>
+              <a href="#" class="btn btn-link text-danger text-decoration-none">
+                Contact Us <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quality Guarantee -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 hover-scale">
+            <div class="card-body text-center p-4">
+              <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex p-3 mb-3">
+                <i class="bi bi-award fs-1 text-danger"></i>
+              </div>
+              <h4 class="fw-bold">Quality Guarantee</h4>
+              <p class="text-muted">
+                We stand behind every product we sell with our 100% satisfaction guarantee
+              </p>
+              <a href="#" class="btn btn-link text-danger text-decoration-none">
+                Our Promise <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <span class="badge bg-danger mb-2">Testimonials</span>
+          <h2 class="fw-bold mb-3">What Our Customers Say</h2>
+          <p class="lead text-muted mx-auto" style="max-width: 600px;">
+            Don't just take our word for it - hear from our satisfied customers
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="card-text mb-4">"The quality of the silk fabric I purchased exceeded my expectations. It's
+                absolutely luxurious and worth every penny!"</p>
+              <div class="d-flex align-items-center">
+                <img src="https://randomuser.me/api/portraits/women/32.jpg" class="rounded-circle me-3" width="50"
+                  height="50" alt="Customer">
+                <div>
+                  <h6 class="mb-0">Sarah Johnson</h6>
+                  <small class="text-muted">Fashion Designer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="card-text mb-4">"I've been ordering fabrics from FabricExclusive for years. Their quality is
+                consistent and their customer service is exceptional."</p>
+              <div class="d-flex align-items-center">
+                <img src="https://randomuser.me/api/portraits/men/45.jpg" class="rounded-circle me-3" width="50"
+                  height="50" alt="Customer">
+                <div>
+                  <h6 class="mb-0">Michael Chen</h6>
+                  <small class="text-muted">Tailor</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body">
+              <div class="text-warning mb-3">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+              </div>
+              <p class="card-text mb-4">"The free sample service helped me choose the perfect fabric for my project.
+                Fast shipping and beautiful materials!"</p>
+              <div class="d-flex align-items-center">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50"
+                  height="50" alt="Customer">
+                <div>
+                  <h6 class="mb-0">Emily Rodriguez</h6>
+                  <small class="text-muted">Home Sewer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="py-5 gradient-bg text-white">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="fw-bold mb-3">Join Our Fabric Community</h2>
+          <p class="lead mb-4">
+            Subscribe to our newsletter for exclusive offers, new arrivals, and fabric care tips
+          </p>
+          <form class="row g-2 justify-content-center">
+            <div class="col-md-8">
+              <div class="input-group">
+                <input type="email" class="form-control form-control-lg" placeholder="Your email address">
+                <button type="submit" class="btn btn-light text-danger">
+                  <i class="bi bi-envelope"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 d-grid">
+              <button type="submit" class="btn btn-light btn-lg text-danger fw-bold">
+                Subscribe
+              </button>
+            </div>
+          </form>
+          <small class="text-white-50 mt-2 d-block">We respect your privacy. Unsubscribe at any time.</small>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white py-5">
     <div class="container">
-      <div class="row">
-        <!-- Company -->
-        <div class="col-6 col-md-3 mb-4">
-          <h6 class="text-uppercase">Company</h6>
-          <ul class="list-unstyled">
-            <li><a href="#aboutus" class="text-decoration-none">About Us</a></li>
-            <li><a href="#careers" class="text-decoration-none">Careers</a></li>
-            <li><a href="#press" class="text-decoration-none">Press</a></li>
-            <li><a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#uploadModal">Add Product</a></li>
-          </ul>
-        </div>
-        
-        <!-- Products -->
-        <div class="col-6 col-md-3 mb-4">
-          <h6 class="text-uppercase">Fabrics</h6>
-          <ul class="list-unstyled">
-            <li><a href="#cotton" class="text-decoration-none">Cotton</a></li>
-            <li><a href="#silk" class="text-decoration-none">Silk</a></li>
-            <li><a href="#wool" class="text-decoration-none">Wool</a></li>
-            <li><a href="#linen" class="text-decoration-none">Linen</a></li>
-          </ul>
-        </div>
-        
-        <!-- Support -->
-        <div class="col-6 col-md-3 mb-4">
-          <h6 class="text-uppercase">Support</h6>
-          <ul class="list-unstyled">
-            <li><a href="#contactUs" class="text-decoration-none">Contact Us</a></li>
-            <li><a href="#FAQs" class="text-decoration-none">FAQs</a></li>
-            <li><a href="#terms" class="text-decoration-none">Terms & Conditions</a></li>
-            <li><a href="#privacy" class="text-decoration-none">Privacy Policy</a></li>
-          </ul>
-        </div>
-        
-        <!-- Social -->
-        <div class="col-6 col-md-3 mb-4">
-          <h6 class="text-uppercase">Follow us</h6>
-          <div class="social-icons mb-3">
-            <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <div class="row g-4">
+        <!-- About -->
+        <div class="col-lg-4">
+          <h3 class="fw-bold mb-3">
+            <i class="bi bi-scissors me-2" style="color: #dc3545;"></i>FabricExclusive
+          </h3>
+          <p class="text-muted">
+            Your premier destination for high-quality fabrics since 2010. We source the finest materials from around the
+            world.
+          </p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white fs-4"><i class="bi bi-pinterest"></i></a>
           </div>
-          <h6 class="text-uppercase mt-4">Newsletter</h6>
-          <form class="mt-2">
-            <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Your email" aria-label="Your email">
-              <button class="btn btn-primary" type="button">Subscribe</button>
-            </div>
-          </form>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5 class="fw-bold mb-3">Shop</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">New Arrivals</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Best Sellers</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Sale Items</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Collections</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <!-- Customer Service -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5 class="fw-bold mb-3">Help</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Contact Us</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">FAQs</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Shipping</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Returns</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Fabric Care</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5 class="fw-bold mb-3">Company</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">About Us</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Our Story</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Blog</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Careers</a></li>
+            <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Wholesale</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <h5 class="fw-bold mb-3">Contact</h5>
+          <ul class="list-unstyled text-secondary">
+            <li class="mb-2"><i class="bi bi-geo-alt me-2"></i> 123 Fabric St, Textile City</li>
+            <li class="mb-2"><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+            <li class="mb-2"><i class="bi bi-envelope me-2"></i> info@beebay.com</li>
+            <!-- <li class="mt-3">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visa.svg" alt="Visa" class="me-2"
+                style="height: 40px;">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mastercard.svg" alt="Mastercard"
+                class="me-2" style="height: 40px;">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/paypal.svg" alt="PayPal" class="me-2"
+                style="height: 40px;">
+
+            </li> -->
+          </ul>
         </div>
       </div>
-      <hr class="my-4 bg-light">
+
+      <hr class="my-4 bg-secondary">
+
       <div class="row">
         <div class="col-md-6 text-center text-md-start">
-          <p class="mb-0 ">&copy; 2025 BeebayExclusive. All rights reserved.</p>
+          <p class="mb-0 text-secondary">&copy; 2025 FabricExclusive. All rights reserved.</p>
         </div>
-<div class="col-md-6 text-center text-md-end">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/visa.svg" alt="Visa" class="me-2" style="height: 40px;">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/mastercard.svg" alt="Mastercard" class="me-2" style="height: 40px;">
-  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/paypal.svg" alt="PayPal" class="me-2" style="height: 40px;">
-
-</div>
-
+        <div class="col-md-6 text-center text-md-end">
+          <a href="#" class="text-secondary text-decoration-none me-3">Privacy Policy</a>
+          <a href="#" class="text-secondary text-decoration-none me-3">Terms of Service</a>
+          <a href="#" class="text-secondary text-decoration-none">Accessibility</a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <a href="#" class="btn btn-danger btn-lg rounded-circle position-fixed bottom-0 end-0 m-4"
+    style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+    <i class="bi bi-arrow-up"></i>
+  </a>
 
-  <!-- Bootstrap JS Bundle with Popper -->
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+  </script>
 </body>
+
 </html>
